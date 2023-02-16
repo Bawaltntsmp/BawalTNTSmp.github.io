@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<link rel="icon" href="favicon-32x32.png"/>
+<title> IP Adress - BTSMP</title>
+
+<Body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<script src="script.js"></script>
+<script src="java2.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<style>
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+::-webkit-scrollbar-thumb{
+    width: 5px;
+    border-radius: 5px;
+    background-color: #007CF7;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #78B3EE;
+}
+
+
+header {
+position: fixed;
+width: 100%;
+top: 0;
+right: 0;
+z-index: 1000;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: transparent;
+padding: 28px 12%;
+transition: all .50s ease;
+}
+
+.logo{
+display: flex;
+align-items: center;
+
+}
+
+
+nav{
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+background: #A62C22
+}
+
+.navbar ul {
+list-style: none;
+background:#9FE2BF;
+padding: 0;
+margin: 0;
+}
+.navbar li {
+display:inline-block;
+}
+.navbar a{
+text-decoration: none;
+color:#FFBF00;
+width:200px;
+display:block;
+padding:30px 20px;
+font-size: 20px;
+text-transform: uppercase;
+font-weight: bold;
+}
+
+body {
+    --background-color:	#FAEBD7;
+    --background-color-alt: #eeee;
+    --trim-color: #dddd;
+    --text-color: #333;
+    background: var(--background-color);
+width: 99%;
+height: 50vh;
+background-position: center;
+background-repeat: yes-repeat;
+background-size:cover;
+
+}
+
+body.theme-dark {
+    --background-color: var(--dark-background-color);
+    --background-color-alt: var(--dark-background-color-alt);
+    --trim-color: var(--dark-trim-color);
+    --text-color: var(--dark-text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    body.theme-auto {
+        --background-color: var(--dark-background-color);
+        --background-color-alt: var(--dark-background-color-alt);
+        --trim-color: var(--dark-trim-color);
+        --text-color: var(--dark-text-color);
+    }
+}
+
+img {
+display: block;
+width: 500px;
+height: 300px;
+align-items: right;
+}
+
+h1 {
+    cursor: pointer;
+align-text: left;
+font-size: 35px;
+border:1px solid #17202A;
+background-color:#ECFF00;
+text-align: center;
+}
+
+h2{
+    cursor:copy;
+    border:1px solid #17202A;
+background-color:#ECFF00; 
+}
+h3{
+    cursor: pointer;
+align-text: left;
+font-size: 35px;
+border:1px solid #17202A;
+background-color:#DB6A6A;
+text-align: center;   
+}
+
+ul{
+font-size: 20px;
+text-align:center;
+text-decoration: none;
+}
+
+a2 {
+font-size: 25px;
+}
+text2 {
+color: blue;
+cursor: copy;
+}
+
+C {
+margin-left: auto;
+margin-right: auto;
+font-size: 25px;
+background-color: #9FE2BF;
+border: 3px solid #000000;
+
+}
+.wrapper {
+margin:0 auto;
+width: 500px;
+}
+
+.logo img {
+    align-items: center;
+width: 50px;
+height: 50px;
+margin-right: 12px;
+}
+
+text1 {
+    float: center;
+    font-size: 25px;
+background-color: #FAD7A0;
+border: 3px solid #000000;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    top: 100%;
+background: #111;
+height: auto;
+width: 100vw;
+font-family: Open Sans;
+padding-top: 40px;
+color: #fff;
+}
+
+.content-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.content-footer {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.content-footer p6{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.Socials {
+list-style: none;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 1rem 0 3rem 0;
+}
+
+.Socials :hover  {
+    color: aqua;
+    transform: scale(1.4);
+}
+
+.Socials li{
+margin: 0 10px;
+transition: transform .2s ease-in-out;
+}
+
+.Socials a {
+    text-decoration: none;
+    color: #FFBF00;
+    
+}
+.Socials a i {
+    font-size: 1.1rem;
+}
+
+.footer-bottom{
+    background: #000000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+a2 {
+    text-decoration: none;
+    font-size: 25px;
+    border:1px solid #17202A;
+background-color:#ECFF00; 
+}
+
+form {
+    position: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 10rem;
+background: #808080;
+display: flex;
+flex-direction: column;
+padding: 2vw 4vw;
+width: 90%;
+max-width: 600px;
+border-radius: 10px;
+}
+form h5{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 800;
+    margin-bottom: ;
+}
+form input, form textarea {
+    border-radius: 10px;
+    border: 0;
+    margin: 10px 0;
+   padding: 20px;
+   outline: none;
+   background: #A9A9A9; 
+   font-size: 16px;
+}
+form button {
+    padding: 15px;
+    background: #ff5361;
+    color: #fff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+    transition: transform .2s ease-in-out;
+}
+form button:hover {
+    background: #F78992;
+    transform: scale(1.3);
+}
+
+
+form label {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+:root {
+    /* Dark Theme */
+    --dark-background-color: #37474f;
+    --dark-background-color-alt: #222222;
+    --dark-trim-color: #333333;
+    --dark-text-color: #eeeeee;
+
+    /* Light Theme */
+    --background-color:	#FAEBD7;
+    --background-color-alt: #eeee;
+    --trim-color: #dddd;
+    --text-color: #333;
+} 
+.select {
+    font-size: 30px;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 8px;
+    border-radius: 10px;
+}
+.select__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 7px 14px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    font-weight: 500;
+    font-family: var();
+}
+
+.select__input option {
+    color: #000000;
+}
+
+select {
+font-family: 'Bebas Neue', cursive;
+width: auto;
+height: 3.5rem;
+background: #A9A9A9;
+border-radius: 20px;
+}
+
+
+
+</style>
+
+<nav>
+<label class="logo"></label>
+<ul class="navbar">
+    <div class="select">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+        <select class="select__input" id="selTheme">
+            <option value="auto">Auto</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </div>
+<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')"><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
+<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')"><a href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
+<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')"><a href="Creator.html"><ion-icon name="people-outline"></ion-icon> Creators</a></li>
+<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')"><a href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
+<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')"><a href="#"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a></li>
+</nav>
+
+<div class="wrapper">
+<img src="MC1.png" alt="Image Here">
+</div>
+
+<C>
+<h1 onmouseover="changeText(this, 'Copy The IP Adress')" onmouseout="changeText(this, 'Bawal TNT SMP Server IP Adress')">Bawal TNT SMP Server IP Adress</h1>
+<a2>
+<text>Bawal TNT SMP IP Adress Is:</text> <text2>bawaltnt.aternos.me</text2>
+<text3>Or</text3> <text2>bawaltnt.aternos.me:27521</text2>
+</a2>
+<h1>How to Add A Server To Multiplayer In Minecraft</h1>
+<text5>If you Dont Know How to Add a Server Please Watch<text5>
+<a href="https://www.youtube.com/watch?v=OQiB7TkIa4Y">
+<text4>THIS<text4>
+</a>
+</C>
+<script src="script.js"></script>
+
+<h1 onmouseover="changeText(this, 'https://help.minecraft.net/hc/en-us/articles/4410317081741-How-to-Play-Minecraft-Java-Edition-Multiplayer')" onmouseout="changeText(this, 'Some Tips From Minecraft')">Some Tips From Minecraft</h1>
+<li><a2>Connect to another player's server:
+    Log into Minecraft and click Multiplayer on the main menu,
+    Click Add Server and enter the IP or web address of the server. Tip: 
+    If you don't know the IP of a server, thousands of public servers can be 
+    located by doing a web search for something that suits your style of play.</a2></li>
+</div>
+</div>
+</div>
+<br>
+
+<h3 onmouseover="changeBgColor(this, 'white')" onmouseout="changeBgColor(this, '#DB6A6A')"><i class="fa-solid fa-comment-dots"></i><i class="fa-solid fa-comments"></i> FeedBack Form! <i class="fa-solid fa-comments"></i><i class="fa-solid fa-comment-dots"></i></h3>
+
+
+<div class="container4">
+    <form
+    action="https://formspree.io/f/xqkoplbo"
+    method="POST"
+  >
+  <h5><i class="fa-solid fa-envelope-circle-check"></i> || Connect / Chat With Us! || <i class="fa-solid fa-truck-fast"></i></h5>  
+  <label>
+    Name: Surname, Middle Initial, Given Name 
+    <input type="text" name="Name" placeholder="Name Here" required>
+
+  </label>
+  <br>
+  <label>
+      Your email: Ex. example@gmail.com
+      <input type="email" name="Email" placeholder="Email Here" required>
+    </label>
+    <br>
+<label>
+    Select An Option: *Note: You Can Add More Details In The FeedBack Box!*
+  <select name="Problems" id = "webs" required="">
+<option value=""> Select 1 Option Down Below:  </option>
+<option value="Rtext"> I Cant Read Text </option>
+<option value="navigation"> Navigation - Too Hard </option>
+<option value="copytext"> I Cant Copy A Text </option>
+<option value="webcolor"> Website Color Looks Bad </option>
+<option value="others"> *Others - Write in Feedback Box* </option>
+<option value="cantconnect"> I Cant Connect To Server </option>
+<option value="n/a"> *N/A* </option>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  </select>
+<br>
+</label>
+    <label>
+      Your Feedback: What Do You Want To Say To Us
+      <textarea type="textarea" name="Feedback/Message" placeholder="Your FeedBack & Message Will Be Read Within 24 Hours So Chat Us NOW!" rows="4"></textarea>
+    </label>
+    <!-- your other form fields go here -->
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<footer>
+    <div class="content-footer">
+    <h6><ion-icon name="checkmark-done-circle-outline"></ion-icon> Bawal TNT SMP Website <ion-icon name="checkmark-done-circle-outline"></ion-icon></h6>
+    <p6><ion-icon name="create"></ion-icon> "This Website is Updated At 9:42 PM In Febuary 16 2023" <ion-icon name="create"></ion-icon> || <ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon> || <ion-icon name="megaphone"></ion-icon> Shout Out To MC Support No affiliation with MC</p6>
+    <p7><i class="fa-solid fa-house-signal"></i> Connect With Us <i class="fa-solid fa-house-signal"></i></p7>
+    <ul class="Socials">
+    <li><a href="https://github.com/FLIGHNE"><ion-icon name="logo-github"></ion-icon></a></li>
+    <li><a href="https://www.youtube.com/channel/UC61VXfPklBBMO64Ihx6cRkg"><ion-icon name="logo-youtube"></ion-icon></a></li>
+    <li><a href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon></a></li>
+    <li><a href="https://www.twitch.tv/flighne"><ion-icon name="logo-twitch"></ion-icon></a></li>
+    <li><a href="https://twitter.com/FLIGHNE7"><ion-icon name="logo-twitter"></ion-icon></a></li>
+    </ul>
+    </div>
+    <div class="footer-bottom">
+<d>copyright &copy;2023 BawalTNTSmp.github.io designed by <span>FLIGHNE</span> </d>
+    </div>
+    </footer>
+
+</Body>
