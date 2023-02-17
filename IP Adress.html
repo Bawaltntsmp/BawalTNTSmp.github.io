@@ -254,6 +254,7 @@ transition: transform .2s ease-in-out;
 }
 
 .footer-bottom span{
+    cursor: pointer;
     text-transform: uppercase;
     opacity: .4;
     font-weight: 200;
@@ -284,7 +285,7 @@ form h5{
     font-size: 30px;
     color: #fff;
     font-weight: 800;
-    margin-bottom: ;
+   
 }
 form input, form textarea {
     border-radius: 10px;
@@ -374,17 +375,17 @@ border-radius: 20px;
 <ul class="navbar">
     <div class="select">
         <i class="fa-solid fa-circle-half-stroke"></i>
-        <select class="select__input" id="selTheme">
+        <select class="select__input" id="selTheme" title="Change Theme">
             <option value="auto">Auto</option>
             <option value="light">Light</option>
             <option value="dark">Dark</option>
         </select>
     </div>
-<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')"><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
-<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')"><a href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
-<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')"><a href="Creator.html"><ion-icon name="people-outline"></ion-icon> Creators</a></li>
-<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')"><a href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
-<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')"><a href="#"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a></li>
+<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Go Home"><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
+<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Socials"><a href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
+<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Creators"><a href="Creator.html"><ion-icon name="people-outline"></ion-icon> Creators</a></li>
+<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Discord"><a href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
+<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="IP Adress"><a href="#"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a></li>
 </nav>
 
 <div class="wrapper">
@@ -394,13 +395,13 @@ border-radius: 20px;
 <C>
 <h1 onmouseover="changeText(this, 'Copy The IP Adress')" onmouseout="changeText(this, 'Bawal TNT SMP Server IP Adress')">Bawal TNT SMP Server IP Adress</h1>
 <a2>
-<text>Bawal TNT SMP IP Adress Is:</text> <text2>bawaltnt.aternos.me</text2>
-<text3>Or</text3> <text2>bawaltnt.aternos.me:27521</text2>
+<text>Bawal TNT SMP IP Adress Is:</text> <text2 title="Copy This Text">bawaltnt.aternos.me</text2>
+<text3>Or</text3> <text2 title="Copy This Text">bawaltnt.aternos.me:27521</text2>
 </a2>
 <h1>How to Add A Server To Multiplayer In Minecraft</h1>
 <text5>If you Dont Know How to Add a Server Please Watch<text5>
 <a href="https://www.youtube.com/watch?v=OQiB7TkIa4Y">
-<text4>THIS<text4>
+<text4 title="How To Add Minecraft Server">THIS<text4>
 </a>
 </C>
 <script src="script.js"></script>
@@ -418,7 +419,7 @@ border-radius: 20px;
 
 <h3 onmouseover="changeBgColor(this, 'white')" onmouseout="changeBgColor(this, '#DB6A6A')"><i class="fa-solid fa-comment-dots"></i><i class="fa-solid fa-comments"></i> FeedBack Form! <i class="fa-solid fa-comments"></i><i class="fa-solid fa-comment-dots"></i></h3>
 
-
+<!-- This Is The Forms Area -->
 <div class="container4">
     <form
     action="https://formspree.io/f/xqkoplbo"
@@ -427,13 +428,13 @@ border-radius: 20px;
   <h5><i class="fa-solid fa-envelope-circle-check"></i> || Connect / Chat With Us! || <i class="fa-solid fa-truck-fast"></i></h5>  
   <label>
     Name: Surname, Middle Initial, Given Name 
-    <input type="text" name="Name" placeholder="Name Here" required>
+    <input type="text" name="Name" placeholder="Name Here" required title="Your Name Here">
 
   </label>
   <br>
   <label>
       Your email: Ex. example@gmail.com
-      <input type="email" name="Email" placeholder="Email Here" required>
+      <input type="email" name="Email" placeholder="Email Here" required title="Your Gmail Here">
     </label>
     <br>
 <label>
@@ -456,10 +457,10 @@ border-radius: 20px;
 </label>
     <label>
       Your Feedback: What Do You Want To Say To Us
-      <textarea type="textarea" name="Feedback/Message" placeholder="Your FeedBack & Message Will Be Read Within 24 Hours So Chat Us NOW!" rows="4"></textarea>
+      <textarea type="textarea" name="Feedback/Message" placeholder="Your FeedBack & Message Will Be Read Within 24 Hours So Chat Us Now!" rows="4" title="Write Something About Us"></textarea>
     </label>
     <!-- your other form fields go here -->
-    <button type="submit">Send</button>
+    <button type="submit" title="Send FeedBack | *Please Check If You Missed Something* ">Send</button>
   </form>
 </div>
 
@@ -477,7 +478,7 @@ border-radius: 20px;
     </ul>
     </div>
     <div class="footer-bottom">
-<d>copyright &copy;2023 BawalTNTSmp.github.io designed by <span>FLIGHNE</span> </d>
+<d>copyright &copy;2023 BawalTNTSmp.github.io designed by <span title=" Website Creator">FLIGHNE</span> </d>
     </div>
     </footer>
 
