@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="icon" href="favicon-32x32.png"/>
+
+
+
 <Body" >
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
@@ -10,6 +13,9 @@
 
 <!-- Style Part Is This Part -->
 <style>
+    html {
+        scroll-behavior: smooth;
+    }
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -388,24 +394,31 @@ h1{
    height: 563px;
    margin-bottom: 60px;
 }
-.gotopbtn {
-    color: #000000;
-    background: #229954;
-position: fixed;
-bottom: 16px;
-right: 32px;
-width: 50px;
-height: 50px;
-border: 50%;
-border-radius: 30px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 32px;
-text-decoration: none;
-opacity: 1;
-transition: all .4s;
+#back-to-top-btn {
+  display: ;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 26px;
+  width: 50%;
+  max-width: 50px;
+  height: 50px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  border: 3px solid #333;
+  border-radius: 50%;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, color;
 }
+#back-to-top-btn:hover{
+  background-color: #333;
+  color: #fff;  
+}
+
+
 
 </style>
 
@@ -437,25 +450,27 @@ transition: all .4s;
 <li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Go Home"><a href="#"><ion-icon name="home-outline"></ion-icon> Home</a></li>
 <li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Socials"><a href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
 <li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Creators"><a href="Creator.html"><ion-icon name="people-outline"></ion-icon> Creators</a></li>
-<li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Discord"><a href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
+<li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Discord"><a onclick="checker()" class="btn btn-default" href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
 <li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="IP Adress"><a href="IP Adress.html"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a></li>
 </ul>
 </nav>
 
 <hr>
-<a href="#" class="gotopbtn" title="Go On Top"><i class="fa-solid fa-circle-arrow-up"></i></a>
+
+
+<button id="back-to-top-btn" onclick="gotoLink(this)" value="index.html" title="Go On Top"><i class="fas fa-angle-double-up"></i></button>
 
 <title>Bawal TNT SMP</title>
 
-<a href="https://storyzink.com/m/gd393024?s=2" target="_blanc">
+<a onclick="checker()" class="btn btn-default" href="https://storyzink.com/m/gd393024?s=2" target="_blanc">
 <div class="content" id="first" title="Message Us"><ion-icon name="megaphone-outline"></ion-icon>Message Us!<ion-icon name="megaphone-outline"></ion-icon></div>
 </a>
 
-<a href="https://www.youtube.com/channel/UC61VXfPklBBMO64Ihx6cRkg">
+<a onclick="checker()" class="btn btn-default" href="https://www.youtube.com/channel/UC61VXfPklBBMO64Ihx6cRkg">
 <div class="content" id="second" title="Youtube"><ion-icon name="logo-youtube"></ion-icon> Youtube <ion-icon name="logo-youtube"></ion-icon></div>
 </a>
 
-<a href="#" target="_blanc">
+<a onclick="checker2()" class="btn btn-default" href="#" target="_blanc">
 <div class="content" id="third" title="Nothing To See Here"><ion-icon name="construct-outline"></ion-icon> *IN MAINTENANCE * <ion-icon name="construct-outline"></ion-icon></div>
 </a>
 
