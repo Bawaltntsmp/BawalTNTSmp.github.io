@@ -30,3 +30,23 @@ function applyTheme(theme) {
       applyTheme(this.value);
     });
   });
+
+
+function gotoLink(link){
+   console.log(link.value);
+   location.href = link.value;
+};
+
+function checker(){
+var result = confirm('Are You Sure To Be Redirected?');
+if (result == false) {
+event.preventDefault();
+}
+}
+
+function checker2(){
+  var result = confirm('🚫!! Restricted Area Please Click Cancel Immediately !!🚫');
+  if (result == false) {
+  event.preventDefault();
+  }
+  }
