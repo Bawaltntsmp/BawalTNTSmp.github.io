@@ -10,6 +10,10 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="script.js"></script>
 
+<div class="banner"></div>
+
+<br>
+
 <nav>
 <label class="logo"></label>
 <ul class="navbar">
@@ -86,6 +90,7 @@ margin: 0;
 }
 .navbar li {
 display:inline-block;
+transition: all .3s ease;
 }
 .navbar a{
 text-decoration: none;
@@ -280,8 +285,24 @@ border: 3px solid #000000;
 border-radius: 5px;
 }
 
-
+.banner {
+   border: 3px solid rgb(179, 72, 72);
+width: 99%;
+height: 35vh;
+background-image: url(creator.gif);
+background-size: cover;
+background-position: 100%;
+border-radius: 30px;
+margin-top: 20px;
+filter: brightness(60%);
+transition: filter .3s ease;
+}
+.banner:hover {
+    filter: brightness(80%);
+    cursor: default;
+}
 </style>
+
 
 <img src="Home.png"  height="300" width="300" alt="Image Here"/>
 
@@ -309,6 +330,7 @@ border-radius: 5px;
 <footer>
     <div class="content-footer">
     <h6><ion-icon name="checkmark-done-circle-outline"></ion-icon> Bawal TNT SMP Website <ion-icon name="checkmark-done-circle-outline"></ion-icon></h6>
+    <img src="qr2.png" style="width: 5rem;height: 5rem;" />
     <p6><ion-icon name="create"></ion-icon> "This Website is Updated At 9:43 PM In Febuary 16 2023" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
     <p7><i class="fa-solid fa-house-signal"></i> Connect With Us <i class="fa-solid fa-house-signal"></i></p7>
     <ul class="Socials">

@@ -72,6 +72,7 @@ margin: 0;
 }
 .navbar li {
 display:inline-block;
+transition: all .3s ease;
 }
 .navbar a{
 text-decoration: none;
@@ -417,7 +418,25 @@ h1{
   background-color: #333;
   color: #fff;  
 }
-
+.banner {
+    display: flex;
+   border: 3px solid rgb(179, 72, 72);
+width: 99%;
+max-width: 99%;
+height: 65vh;
+max-height: 65vh;
+background-image: url(banner.gif);
+background-size: cover;
+background-position: 69%;
+border-radius: 30px;
+margin-top: 20px;
+filter: brightness(60%);
+transition: filter .3s ease;
+}
+.banner:hover {
+    filter: brightness(80%);
+    cursor: default;
+}
 
 
 </style>
@@ -425,30 +444,22 @@ h1{
 <!-- The Real Thing Starts Here -->
 <script src="script.js"></script>
 
-<h3 style="text-align:center;">Bawal TNT SMP Website</h3>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-<p style="text-align:center;">Here You Can Send Feedback To Out Server</p>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-
+<div class="banner"></div>
 <p style="text-align:center;"> This Website Is Not Yet Official </p>
 
 <nav>
 <ul class="navbar">
     <div class="select">
         <ion-icon name="contrast-outline">Dark Mode</ion-icon>
-        <select class="select__input" id="selTheme" title="Change Theme">
+        <select class="select__input" id="selTheme" title="Change Theme" onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')">
             <option value="auto">Auto</option>
             <option value="light" style="color: white;">Light</option>
             <option value="dark">Dark</option>
         </select>
     </div>
 <li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Go Home"><a href="#"><ion-icon name="home-outline"></ion-icon> Home</a></li>
-<li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Socials"><a href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
+<li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Socials"><a onclick="checker()" class="btn btn-default" href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
 <li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Creators"><a href="Creator.html"><ion-icon name="people-outline"></ion-icon> Creators</a></li>
 <li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Discord"><a onclick="checker()" class="btn btn-default" href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
 <li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="IP Adress"><a href="IP Adress.html"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a></li>
@@ -570,6 +581,7 @@ h1{
 <footer>
     <div class="content-footer">
     <h6><ion-icon name="checkmark-done-circle-outline"></ion-icon> Bawal TNT SMP Website <ion-icon name="checkmark-done-circle-outline"></ion-icon></h6>
+    <img src="qr2.png" style="width: 5rem;height: 5rem;" />
     <p6><ion-icon name="create"></ion-icon> "This Website is Updated At 9:42 PM In Febuary 16 2023" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
     <p7 title="Find Us Here"><i class="fa-solid fa-house-signal"></i> Connect With Us <i class="fa-solid fa-house-signal"></i></p7>
     <ul class="Socials">
