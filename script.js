@@ -50,3 +50,11 @@ function checker2(){
   event.preventDefault();
   }
   }
+
+  function checker3(){
+    var result = confirm(' || Are You Sure To Go To Form Spree CaptCha? ||');
+    if (result == false) {
+    event.preventDefault();
+    }
+
+  }
