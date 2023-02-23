@@ -26,7 +26,7 @@
         </select>
     </div>
 <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#116C07')" title="Go Home"><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
-<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#116C07')" title="Socials"><a href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
+<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#116C07')" title="Socials"><a onclick="checker()" class="btn btn-default" href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
 <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#116C07')" title="Creators"><a href="Creator.html"><ion-icon name="people-outline"></ion-icon> Creators</a></li>
 <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#116C07')" title="Discord"><a onclick="checker()" class="btn btn-default" href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
 <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#116C07')" title="IP Adress"><a href="IP Adress.html"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a></li>
@@ -158,7 +158,7 @@ footer {
     top: 100%;
 background: #111;
 height: auto;
-width: 100vw;
+width: 100%;
 font-family: Open Sans;
 padding-top: 40px;
 color: #fff;
@@ -288,10 +288,10 @@ border-radius: 5px;
 .banner {
    border: 3px solid rgb(179, 72, 72);
 width: 99%;
-height: 35vh;
+height: 15%;
 background-image: url(creator.gif);
 background-size: cover;
-background-position: 100%;
+background-position: 50%;
 border-radius: 30px;
 margin-top: 20px;
 filter: brightness(60%);
@@ -300,6 +300,60 @@ transition: filter .3s ease;
 .banner:hover {
     filter: brightness(80%);
     cursor: default;
+}
+
+z::after{
+    position: absolute;
+    width: 12em;
+ background-color: #78B3EE;
+content: attr(data-tooltip);
+padding: 0.6rem 0;
+color: #fff;
+margin: auto;
+left: 25em;
+right: 0;
+bottom: 3.5em;
+text-align: center;
+border-radius: 0.2em;
+}
+
+.tooltip1::before{
+position: absolute;
+content: "";
+height: 0;
+width: 0;
+border-top:1.5em solid #78b3ee;
+border-left: 0.5em solid transparent;
+border-right: 0.5em solid transparent;
+top: 35.5em;
+margin: auto;
+left: 25em;
+right: 0;
+bottom: 3em;
+}
+.tooltip1:before, 
+.tooltip1:after {
+    display: none;
+}
+.tooltip1:hover:before, 
+.tooltip1:hover:after {
+display: block;
+}
+
+.tooltip1:after{
+    filter: brightness(100%)
+    position: absolute;
+    width: 12em;
+    background-color: #78B3EE;
+content: attr(data-tooltip);
+padding: 0.6rem 0;
+color: #fff;
+margin: auto;
+left: 25em;
+right: 0;
+bottom: 3.5em;
+text-align: center;
+border-radius: 0.2em;
 }
 </style>
 
@@ -329,12 +383,12 @@ transition: filter .3s ease;
 
 <footer>
     <div class="content-footer">
-    <h6><ion-icon name="checkmark-done-circle-outline"></ion-icon> Bawal TNT SMP Website <ion-icon name="checkmark-done-circle-outline"></ion-icon></h6>
+    <h6><ion-icon name="checkmark-done-circle-outline"></ion-icon> Bawal TNT SMP Website &trade; <ion-icon name="checkmark-done-circle-outline"></ion-icon></h6>
     <img src="qr2.png" style="width: 5rem;height: 5rem;" />
-    <p6><ion-icon name="create"></ion-icon> "This Website is Updated At 9:43 PM In Febuary 16 2023" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
+    <p6><ion-icon name="create"></ion-icon> "This Website is Updated At 8:46 PM In Febuary 23 2023 And Is Only For Desktop" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
     <p7><i class="fa-solid fa-house-signal"></i> Connect With Us <i class="fa-solid fa-house-signal"></i></p7>
     <ul class="Socials">
-    <li><a href="https://github.com/FLIGHNE"><ion-icon name="logo-github"></ion-icon></a></li>
+    <li title="Medal.TV"><a href="https://medal.tv/u/FLIGHNE"><i class="fa-solid fa-medal"></i></a></li>
     <li><a href="https://www.youtube.com/channel/UC61VXfPklBBMO64Ihx6cRkg"><ion-icon name="logo-youtube"></ion-icon></a></li>
     <li><a href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon></a></li>
     <li><a href="https://www.twitch.tv/flighne"><ion-icon name="logo-twitch"></ion-icon></a></li>
@@ -342,7 +396,7 @@ transition: filter .3s ease;
     </ul>
     </div>
     <div class="footer-bottom">
-<d>copyright &copy;2023 BawalTNTSmp.github.io designed by <span title=" Website Creator">FLIGHNE</span> </d>
+<d>copyright &copy;2023 BawalTNTSmp.github.io designed by <span><z class="tooltip1" data-tooltip="Website Creator">FLIGHNE</z></span> </d>
     </div>
     </footer>
 </body>

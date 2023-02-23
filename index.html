@@ -223,7 +223,7 @@ footer {
     top: 100%;
 background: #111;
 height: auto;
-width: 100vw;
+width: 100%;
 font-family: Open Sans;
 padding-top: 40px;
 color: #fff;
@@ -419,23 +419,119 @@ h1{
   color: #fff;  
 }
 .banner {
+    position: relative;
     display: flex;
    border: 3px solid rgb(179, 72, 72);
-width: 99%;
-max-width: 99%;
-height: 65vh;
-max-height: 65vh;
+margin: auto;
+height: 65%;
+max-height: 50vh;
 background-image: url(banner.gif);
 background-size: cover;
-background-position: 69%;
+background-position: 50%;
 border-radius: 30px;
 margin-top: 20px;
+margin-left: auto;
+margin-right: auto;
 filter: brightness(60%);
 transition: filter .3s ease;
 }
 .banner:hover {
     filter: brightness(80%);
     cursor: default;
+}
+
+.tooltip1::after{
+    position: absolute;
+    width: 12em;
+    background-color: #229954;
+content: attr(data-tooltip);
+padding: 0.6rem 0;
+color: #fff;
+margin: auto;
+left: 25em;
+right: 0;
+bottom: 3.5em;
+text-align: center;
+border-radius: 0.2em;
+
+}
+
+.tooltip1::before{
+position: absolute;
+content: "";
+height: 0;
+width: 0;
+border-top:1.5em solid #229954;
+border-left: 0.5em solid transparent;
+border-right: 0.5em solid transparent;
+top: 35.5em;
+margin: auto;
+left: 25em;
+right: 0;
+bottom: 3em;
+}
+.tooltip1:before, 
+.tooltip1:after {
+    display: none;
+}
+.tooltip1:hover:before, 
+.tooltip1:hover:after {
+display: block;
+}
+
+.tooltip1:after {
+    position: absolute;
+    filter: brightness(100%)
+    width: 12em;
+    background-color: #229954;
+content: attr(data-tooltip);
+padding: 0.6rem 0;
+color: #fff;
+margin: auto;
+left: 25em;
+right: 0;
+bottom: 3.5em;
+text-align: center;
+border-radius: 0.2em;
+}
+
+.tooltip2 p{
+  margin: auto;
+display: block;
+width: 600px;
+background: #4A235A;
+border: 1px solid #000000;
+padding: 10px 10px;
+text-decoration: none;
+color: #fff;
+}
+.tooltip2 span {
+    margin-top: 20px;
+display: none;
+}
+.tooltip2:hover span {
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+    display: block;
+    width: 200px;
+    padding: 10px 10px;
+    background-color: #9FE2BF;
+    border: 1px solid #111;
+   margin-bottom: 10px;
+   margin-top: 10px;
+}
+.tooltip2:hover:after{
+    margin: auto;
+    content: "";
+    background: #9FE2BF;
+    width: 20px;
+    height: 15px;
+    position: absolute;
+  margin-left: 48%;
+  margin-top: -4.9%;
+  transform: rotate(45deg);
+  transition: all .4s ease;
 }
 
 
@@ -446,7 +542,11 @@ transition: filter .3s ease;
 
 
 <div class="banner"></div>
-<p style="text-align:center;"> This Website Is Not Yet Official </p>
+<br>
+<div class="tooltip2">
+<p style="text-align:center;" href="#"> This Website Not Yet official! *Hover Me*</p>
+<span>Note: This Website Is Not Yet official And Designed For Desktop Only! </span>
+</div>
 
 <nav>
 <ul class="navbar">
@@ -521,11 +621,12 @@ transition: filter .3s ease;
 <h4>= About This Server =</h4>
 <text>This Server Is Run By</Text>
 <a href="https://aternos.org/:en/" target="_blanc">
-<text2 style="font-size:25px" title="Aternos.org"> Aternos </text2>
+<text2 style="font-size:25px" title="Aternos.org"> <y data-tooltip="Aternos.Org">Aternos</y> </text2>
 </a>
 <text3 style="font-size:25px">And Was Created Because We Want to Make New Friends</text3>
 <div class="background-image"></div>
-
+<br>
+<text>About Our Tooltpips We Are Still Working On It To Be Able To Be Rsponsive :)</text>
 <h4>Rules of The Server</h4>
 <text> Rules Are Be Kind And Respectfull to Everyone, Dont Be Rude </text>
 <h4>Pictures</h4>
@@ -580,12 +681,12 @@ transition: filter .3s ease;
 
 <footer>
     <div class="content-footer">
-    <h6><ion-icon name="checkmark-done-circle-outline"></ion-icon> Bawal TNT SMP Website <ion-icon name="checkmark-done-circle-outline"></ion-icon></h6>
+    <h6><ion-icon name="checkmark-done-circle-outline"></ion-icon> Bawal TNT SMP Website &trade; <ion-icon name="checkmark-done-circle-outline"></ion-icon></h6>
     <img src="qr2.png" style="width: 5rem;height: 5rem;" />
-    <p6><ion-icon name="create"></ion-icon> "This Website is Updated At 9:42 PM In Febuary 16 2023" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
+    <p6><ion-icon name="create"></ion-icon> "This Website is Updated At 8:46 PM In Febuary 23 2023 And Is Only For Desktop" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
     <p7 title="Find Us Here"><i class="fa-solid fa-house-signal"></i> Connect With Us <i class="fa-solid fa-house-signal"></i></p7>
     <ul class="Socials">
-    <li ><a href="https://github.com/FLIGHNE"><ion-icon name="logo-github"></ion-icon></a></li>
+    <li title="Medal.TV"><a href="https://medal.tv/u/FLIGHNE"><i class="fa-solid fa-medal"></i></a></li>
     <li ><a href="https://www.youtube.com/channel/UC61VXfPklBBMO64Ihx6cRkg"><ion-icon name="logo-youtube"></ion-icon></a></li>
     <li ><a href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon></a></li>
     <li ><a href="https://www.twitch.tv/flighne"><ion-icon name="logo-twitch"></ion-icon></a></li>
@@ -593,7 +694,7 @@ transition: filter .3s ease;
     </ul>
     </div>
     <div class="footer-bottom">
-<d>copyright &copy;2023 BawalTNTSmp.github.io designed by <span title=" Website Creator">FLIGHNE</span> </d>
+<d>copyright &copy;2023 BawalTNTSmp.github.io designed by <span><z class="tooltip1" data-tooltip="Website Creator">FLIGHNE</z></span> </d>
     </div>
     </footer>
     </body>

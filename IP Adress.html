@@ -187,9 +187,9 @@ footer {
     top: 100%;
 background: #111;
 height: auto;
-width: 100vw;
+width: 100%;
 font-family: Open Sans;
-padding-top: 40px;
+padding-top: 150px;
 color: #fff;
 }
 
@@ -369,11 +369,11 @@ border-radius: 20px;
 
 .banner {
    border: 3px solid rgb(179, 72, 72);
-width: 99%;
-height: 65vh;
+height: 90%;
+max-height: 70%;
 background-image: url(banner2.gif);
 background-size: cover;
-background-position: 69%;
+background-position: 50%;
 border-radius: 30px;
 margin-top: 20px;
 filter: brightness(60%);
@@ -398,9 +398,16 @@ background-color:#ECFF00;
 display: flex;
 text-align: center;
 justify-content: center;
-
-
 }
+.tooltip{
+    display: inline-block;
+}
+h6 {
+font-size: 20px;
+margin-top: -6%;
+color: rgb(228, 226, 226);
+}
+
 </style>
 
 
@@ -420,7 +427,7 @@ justify-content: center;
         </select>
     </div>
 <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Go Home"><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
-<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Socials"><a href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
+<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Socials"><a onclick="checker()" class="btn btn-default" href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
 <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Creators"><a href="Creator.html"><ion-icon name="people-outline"></ion-icon> Creators</a></li>
 <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Discord"><a onclick="checker()" class="btn btn-default" href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
 <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="IP Adress"><a href="#"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a></li>
@@ -439,7 +446,7 @@ justify-content: center;
 <text9> Or Scan Me To Just Copy :</text9>
 <br>
 <br>
-<img class="ipqr" src="ipqr.png"/>
+<img class="ipqr" src="ipqr.png" title="Scan Me!"/>
 </a2>
 
 <h1>How to Add A Server To Multiplayer In Minecraft</h1>
@@ -470,6 +477,8 @@ justify-content: center;
     method="POST"
   >
   <h5><i class="fa-solid fa-envelope-circle-check"></i> || Connect / Chat With Us! || <i class="fa-solid fa-truck-fast"></i></h5>  
+  <h6> I. Make Sure To Answer All Questions To Be Able To Send Us a FeedBack! <i class="fa-regular fa-note-sticky"></i> </h6>
+  <h6> II. You Will Receive An Answer Within 24Hours! <i class="fa-regular fa-note-sticky"></i> </h6>
   <label>
     Name: Surname, Middle Initial, Given Name 
     <input type="text" name="Name" placeholder="Name Here" required title="Your Name Here">
@@ -491,6 +500,8 @@ justify-content: center;
 <option value="webcolor"> Website Color Looks Bad </option>
 <option value="others"> *Others - Write in Feedback Box* </option>
 <option value="cantconnect"> I Cant Connect To Server </option>
+<option value="I Cant See The IP Adress"> I Cant See IP Adress </option>
+<option value="Suggestions" title="Write In The FeedBack Box"> "Suggestions Here" </option>
 <option value="n/a"> *N/A* </option>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -504,19 +515,19 @@ justify-content: center;
       <textarea type="textarea" name="Feedback/Message" placeholder="Your FeedBack & Message Will Be Read Within 24 Hours So Chat Us Now!" rows="4" title="Write Something About Us"></textarea>
     </label>
     <!-- your other form fields go here -->
-    <button type="submit" title="Send FeedBack | *Please Check If You Missed Something* ">Send</button>
+    <button type="submit" title="Send FeedBack | *Please Check If You Missed Something* "onclick="checker3()" class="btn btn-default">Send</button>
   </form>
 </div>
 
 <footer>
     <div class="content-footer">
-    <h6><ion-icon name="checkmark-done-circle-outline"></ion-icon> Bawal TNT SMP Website <ion-icon name="checkmark-done-circle-outline"></ion-icon></h6>
+    <h6><ion-icon name="checkmark-done-circle-outline"></ion-icon> Bawal TNT SMP Website &trade; <ion-icon name="checkmark-done-circle-outline"></ion-icon></h6>
 
 <img src="qr2.png" style="width: 5rem;height: 5rem;" />
-    <p6><ion-icon name="create"></ion-icon> "This Website is Updated At 9:43 PM In Febuary 16 2023" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
+    <p6><ion-icon name="create"></ion-icon> "This Website is Updated At 8:46 PM In Febuary 23 2023 And Is Only For Desktop" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
     <p7><i class="fa-solid fa-house-signal"></i> Connect With Us <i class="fa-solid fa-house-signal"></i></p7>
     <ul class="Socials">
-    <li><a href="https://github.com/FLIGHNE"><ion-icon name="logo-github"></ion-icon></a></li>
+    <li title="Medal.TV"><a href="https://medal.tv/u/FLIGHNE"><i class="fa-solid fa-medal"></i></a></li>
     <li><a href="https://www.youtube.com/channel/UC61VXfPklBBMO64Ihx6cRkg"><ion-icon name="logo-youtube"></ion-icon></a></li>
     <li><a href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon></a></li>
     <li><a href="https://www.twitch.tv/flighne"><ion-icon name="logo-twitch"></ion-icon></a></li>
