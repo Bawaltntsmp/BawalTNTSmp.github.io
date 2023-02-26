@@ -309,11 +309,6 @@ text9 {
     background: #126ca8;
 
 }
-text2 {
-background: #229954;
-border: 3px solid #000000;
-    border-radius: 10px;
-}
 
 text3{
     border: 3px solid #000000;
@@ -419,12 +414,13 @@ h1{
   color: #fff;  
 }
 .banner {
+    width: 100%;
     position: relative;
     display: flex;
    border: 3px solid rgb(179, 72, 72);
 margin: auto;
 height: 65%;
-max-height: 50vh;
+max-height: 40vh;
 background-image: url(banner.gif);
 background-size: cover;
 background-position: 50%;
@@ -495,43 +491,65 @@ text-align: center;
 border-radius: 0.2em;
 }
 
-.tooltip2 p{
-  margin: auto;
-display: block;
-width: 600px;
-background: #4A235A;
-border: 1px solid #000000;
-padding: 10px 10px;
-text-decoration: none;
-color: #fff;
-}
-.tooltip2 span {
-    margin-top: 20px;
-display: none;
-}
-.tooltip2:hover span {
-    margin: auto;
+.tooltip2 {
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    font-size: 16px;
-    display: block;
-    width: 200px;
-    padding: 10px 10px;
-    background-color: #9FE2BF;
-    border: 1px solid #111;
-   margin-bottom: 10px;
-   margin-top: 10px;
+    justify-content: center;
+  position: relative;
+  display: block;
+  background: green;
+  border-top: 3px dotted gold;
+  border-bottom: 3px dotted greenyellow;
+  cursor: pointer;
 }
-.tooltip2:hover:after{
-    margin: auto;
-    content: "";
-    background: #9FE2BF;
-    width: 20px;
-    height: 15px;
-    position: absolute;
-  margin-left: 48%;
-  margin-top: -4.9%;
-  transform: rotate(45deg);
-  transition: all .4s ease;
+
+.tooltip2 .tooltiptext {
+    left: 860px;
+    bottom: 25px;
+    font-size: 16px;
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip2:hover .tooltiptext {
+  visibility: visible;
+}
+.tooltip3 {
+    font-size: 25px;
+    border-radius: 10px;
+  position: relative;
+  display: inline-block;
+  background: yellowgreen;
+  border: 3px solid #000000;
+  cursor: pointer;
+}
+
+.tooltip3 .tooltiptext2 {
+    bottom: 35px;
+    left: -20px;
+    font-size: 16px;
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip3:hover .tooltiptext2 {
+  visibility: visible;
 }
 
 
@@ -544,8 +562,8 @@ display: none;
 <div class="banner"></div>
 <br>
 <div class="tooltip2">
-<p style="text-align:center;" href="#"> This Website Not Yet official! *Hover Me*</p>
-<span>Note: This Website Is Not Yet official And Designed For Desktop Only! </span>
+This Website Not Yet official! *Hover Me*
+<span class="tooltiptext"><i class="fa-solid fa-comments"></i>Note: This Website Is Still In Develope Stage! Give Us A FeedBack!</span>
 </div>
 
 <nav>
@@ -562,7 +580,7 @@ display: none;
 <li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Socials"><a onclick="checker()" class="btn btn-default" href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
 <li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Creators"><a href="Creator.html"><ion-icon name="people-outline"></ion-icon> Creators</a></li>
 <li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Discord"><a onclick="checker()" class="btn btn-default" href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
-<li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="IP Adress"><a href="IP Adress.html"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a></li>
+<li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="IP Adress & FeedBack Form"><a href="IP Adress.html"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a></li>
 </ul>
 </nav>
 
@@ -621,7 +639,10 @@ display: none;
 <h4>= About This Server =</h4>
 <text>This Server Is Run By</Text>
 <a href="https://aternos.org/:en/" target="_blanc">
-<text2 style="font-size:25px" title="Aternos.org"> <y data-tooltip="Aternos.Org">Aternos</y> </text2>
+    <div class="tooltip3">
+        Aternos
+<text2 class="tooltiptext2" title="Aternos.org"> Aternos.org </text2>
+</div>
 </a>
 <text3 style="font-size:25px">And Was Created Because We Want to Make New Friends</text3>
 <div class="background-image"></div>

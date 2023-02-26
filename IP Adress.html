@@ -407,7 +407,30 @@ font-size: 20px;
 margin-top: -6%;
 color: rgb(228, 226, 226);
 }
+.tooltip1 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+}
 
+.tooltip1 .tooltiptext1 {
+    bottom: 30px;
+    left: 360px;
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip1:hover .tooltiptext1 {
+  visibility: visible;
+}
 </style>
 
 
@@ -430,7 +453,7 @@ color: rgb(228, 226, 226);
 <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Socials"><a onclick="checker()" class="btn btn-default" href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
 <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Creators"><a href="Creator.html"><ion-icon name="people-outline"></ion-icon> Creators</a></li>
 <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Discord"><a onclick="checker()" class="btn btn-default" href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
-<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="IP Adress"><a href="#"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a></li>
+<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="IP Adress & Feedback Form"><a href="#"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a></li>
 </nav>
 
 <div class="wrapper">
@@ -535,7 +558,11 @@ color: rgb(228, 226, 226);
     </ul>
     </div>
     <div class="footer-bottom">
-<d>copyright &copy;2023 BawalTNTSmp.github.io designed by <span title=" Website Creator">FLIGHNE</span> </d>
+        <div class="tooltip1">
+            FLIGHNE
+
+            <d>copyright &copy;2023 BawalTNTSmp.github.io designed by <span>FLIGHNE</span><span2 class="tooltiptext1"> Website Creator</span2> </d>
+        </div>
     </div>
     </footer>
 
