@@ -492,6 +492,7 @@ border-radius: 0.2em;
 }
 
 .tooltip2 {
+    width: fit-content;
     font-size: 25px;
     margin-left: auto;
     margin-right: auto;
@@ -500,17 +501,18 @@ border-radius: 0.2em;
   position: relative;
   display: block;
   background: green;
-  border-top: 3px dotted gold;
-  border-bottom: 3px dotted greenyellow;
+ border-left: 6px solid goldenrod;
   cursor: pointer;
+  border-bottom: 3px outset #007CF7;
+  border-top:  3px outset #007CF7;
 }
 
 .tooltip2 .tooltiptext {
-    left: 860px;
+    left: 150px;
     bottom: 25px;
     font-size: 16px;
   visibility: hidden;
-  width: 120px;
+  width: 150px;
   background-color: #555;
   color: #fff;
   text-align: center;
@@ -518,10 +520,13 @@ border-radius: 0.2em;
   padding: 5px 0;
   position: absolute;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .tooltip2:hover .tooltiptext {
   visibility: visible;
+  opacity: 1;
 }
 .tooltip3 {
     font-size: 25px;
@@ -531,6 +536,7 @@ border-radius: 0.2em;
   background: yellowgreen;
   border: 3px solid #000000;
   cursor: pointer;
+  transition: all .4s ease-in;
 }
 
 .tooltip3 .tooltiptext2 {
@@ -546,10 +552,13 @@ border-radius: 0.2em;
   padding: 5px 0;
   position: absolute;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .tooltip3:hover .tooltiptext2 {
   visibility: visible;
+  opacity: 1;
 }
 
 
@@ -562,7 +571,7 @@ border-radius: 0.2em;
 <div class="banner"></div>
 <br>
 <div class="tooltip2">
-This Website Not Yet official! *Hover Me*
+  This Website Not Yet official! *Hover Me*
 <span class="tooltiptext"><i class="fa-solid fa-comments"></i>Note: This Website Is Still In Develope Stage! Give Us A FeedBack!</span>
 </div>
 
