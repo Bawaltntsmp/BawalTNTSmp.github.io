@@ -58,3 +58,36 @@ function checker2(){
     }
 
   }
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+  
+  window.addEventListener("scroll", function() {
+    var goUpButton = document.getElementById("go-up-button");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      goUpButton.classList.add("show");
+    } else {
+      goUpButton.classList.remove("show");
+    }
+  });
+
+  window.addEventListener("load", function() {
+    var preloader = document.getElementById("preloader");
+    preloader.style.display = "none";
+  });
+
+  window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+  
+    loader.classList.add("loader--hidden");
+  
+    loader.addEventListener("transitionend", () => {
+      document.body.removeChild(loader);
+    });
+  });
+  
+  

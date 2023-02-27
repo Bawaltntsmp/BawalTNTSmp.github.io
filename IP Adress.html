@@ -10,8 +10,17 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-<style>
 
+</div>
+<div class="loader">
+  <img class="imgloader" src="loader.png">
+  <p class="textloader">BTSMP - FLIGHNE</p>
+
+</div>
+
+
+
+<style>
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -431,8 +440,181 @@ color: rgb(228, 226, 226);
 .tooltip1:hover .tooltiptext1 {
   visibility: visible;
 }
-</style>
+.loader {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  transition: opacity 4s, visibility 2s;
+  z-index: 99999;
+}
 
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #009578;
+  border-radius: 50%;
+  animation: loading .4s ease infinite;
+}
+.imgloader{
+    width: fit-content;
+    height: fit-content;
+}
+.textloader{
+  color: #dddddd;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.tooltip3 {
+    font-size: 25px;
+    border-radius: 10px;
+  position: relative;
+  display: inline-block;
+  background: yellowgreen;
+  border: 3px solid #000000;
+  cursor: pointer;
+  transition: all .4s ease-in;
+}
+
+.tooltip3 .tooltiptext2 {
+    bottom: 35px;
+    left: -20px;
+    font-size: 16px;
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip3:hover .tooltiptext2 {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltip0 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+}
+
+.tooltip0 .tooltiptext3 {
+    left: 1750px;
+    top: 830px;
+  visibility: hidden;
+  width: 100px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+  position: fixed;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip0:hover .tooltiptext3 {
+  visibility: visible;
+  opacity: 1;
+}
+
+#go-up-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 16px;
+  background-color: whitesmoke;
+  color: #111;
+  border: 3px solid #000000;
+  border-radius: 50%;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+#go-up-button:hover {
+  background-color: #555;
+}
+
+#go-up-button.show {
+  display: block;
+  opacity: 1;
+  .loader {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  transition: opacity 4s, visibility 2s;
+  z-index: 99999;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #FFBF00;
+  border-radius: 50%;
+  animation: loading .4s ease infinite;
+}
+.textloader{
+  color: #dddddd;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+}
+</style>
+</div>
 
 <div class="banner"></div>
 
@@ -455,6 +637,11 @@ color: rgb(228, 226, 226);
 <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Discord"><a onclick="checker()" class="btn btn-default" href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
 <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="IP Adress & Feedback Form"><a href="#"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a></li>
 </nav>
+
+<div class="tooltip0">
+    <button id="go-up-button" onclick="scrollToTop()"><i class="fas fa-angle-double-up"></i></button>
+    <span class="tooltiptext3"> Go On Top </span>
+    </div>
 
 <div class="wrapper">
 <img src="MC1.png" alt="Image Here">
@@ -547,7 +734,7 @@ color: rgb(228, 226, 226);
     <h6><ion-icon name="checkmark-done-circle-outline"></ion-icon> Bawal TNT SMP Website &trade; <ion-icon name="checkmark-done-circle-outline"></ion-icon></h6>
 
 <img src="qr2.png" style="width: 5rem;height: 5rem;" />
-    <p6><ion-icon name="create"></ion-icon> "This Website is Updated At 8:46 PM In Febuary 23 2023 And Is Only For Desktop" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
+    <p6><ion-icon name="create"></ion-icon> "This Website is Updated At 7:08 PM In Febuary 27 2023" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
     <p7><i class="fa-solid fa-house-signal"></i> Connect With Us <i class="fa-solid fa-house-signal"></i></p7>
     <ul class="Socials">
     <li title="Medal.TV"><a href="https://medal.tv/u/FLIGHNE"><i class="fa-solid fa-medal"></i></a></li>

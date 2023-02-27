@@ -10,6 +10,12 @@
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+</div>
+<div class="loader">
+  <img class="imgloader" src="loader.png">
+  <p class="textloader">BTSMP - FLIGHNE</p>
+
+</div>
 
 <!-- Style Part Is This Part -->
 <style>
@@ -33,7 +39,48 @@
 ::-webkit-scrollbar-thumb:hover{
     background-color: #78B3EE;
 }
+.loader {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  transition: opacity 0.75s, visibility 1s;
+  z-index: 99999;
+}
 
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #FFBF00;
+  border-radius: 50%;
+  animation: loading .4s ease infinite;
+}
+.textloader{
+  color: #dddddd;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
 
 header {
 position: fixed;
@@ -390,28 +437,28 @@ h1{
    height: 563px;
    margin-bottom: 60px;
 }
-#back-to-top-btn {
-  display: ;
+#go-up-button {
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  font-size: 26px;
-  width: 50%;
-  max-width: 50px;
-  height: 50px;
-  background-color: #fff;
-  color: #333;
-  cursor: pointer;
-  outline: none;
-  border: 3px solid #333;
+  font-size: 16px;
+  background-color: whitesmoke;
+  color: #111;
+  border: 3px solid #000000;
   border-radius: 50%;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-property: background-color, color;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
 }
-#back-to-top-btn:hover{
-  background-color: #333;
-  color: #fff;  
+
+#go-up-button:hover {
+  background-color: #555;
+}
+
+#go-up-button.show {
+  display: block;
+  opacity: 1;
 }
 .banner {
     width: 100%;
@@ -507,7 +554,7 @@ border-radius: 0.2em;
   border-top:  3px outset #007CF7;
 }
 
-.tooltip2 .tooltiptext {
+.tooltip2 .tooltiptext1 {
     left: 150px;
     bottom: 25px;
     font-size: 16px;
@@ -524,7 +571,7 @@ border-radius: 0.2em;
   transition: opacity 0.3s ease-in-out;
 }
 
-.tooltip2:hover .tooltiptext {
+.tooltip2:hover .tooltiptext1 {
   visibility: visible;
   opacity: 1;
 }
@@ -560,7 +607,33 @@ border-radius: 0.2em;
   visibility: visible;
   opacity: 1;
 }
+.tooltip0 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+}
 
+.tooltip0 .tooltiptext3 {
+    left: 1750px;
+    top: 830px;
+  visibility: hidden;
+  width: 100px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+  position: fixed;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip0:hover .tooltiptext3 {
+  visibility: visible;
+  opacity: 1;
+}
 
 </style>
 
@@ -572,7 +645,7 @@ border-radius: 0.2em;
 <br>
 <div class="tooltip2">
   This Website Not Yet official! *Hover Me*
-<span class="tooltiptext"><i class="fa-solid fa-comments"></i>Note: This Website Is Still In Develope Stage! Give Us A FeedBack!</span>
+<span class="tooltiptext1"><i class="fa-solid fa-comments"></i>Note: This Website Is Still In Develope Stage! Give Us A FeedBack!</span>
 </div>
 
 <nav>
@@ -595,8 +668,10 @@ border-radius: 0.2em;
 
 <hr>
 
-
-<button id="back-to-top-btn" onclick="gotoLink(this)" value="index.html" title="Go On Top"><i class="fas fa-angle-double-up"></i></button>
+<div class="tooltip0">
+<button id="go-up-button" onclick="scrollToTop()"><i class="fas fa-angle-double-up"></i></button>
+<span class="tooltiptext3"> Go On Top </span>
+</div>
 
 <title>Bawal TNT SMP</title>
 
@@ -713,7 +788,7 @@ border-radius: 0.2em;
     <div class="content-footer">
     <h6><ion-icon name="checkmark-done-circle-outline"></ion-icon> Bawal TNT SMP Website &trade; <ion-icon name="checkmark-done-circle-outline"></ion-icon></h6>
     <img src="qr2.png" style="width: 5rem;height: 5rem;" />
-    <p6><ion-icon name="create"></ion-icon> "This Website is Updated At 8:46 PM In Febuary 23 2023 And Is Only For Desktop" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
+    <p6><ion-icon name="create"></ion-icon> "This Website is Updated At 7:08 PM In Febuary 27 2023" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
     <p7 title="Find Us Here"><i class="fa-solid fa-house-signal"></i> Connect With Us <i class="fa-solid fa-house-signal"></i></p7>
     <ul class="Socials">
     <li title="Medal.TV"><a href="https://medal.tv/u/FLIGHNE"><i class="fa-solid fa-medal"></i></a></li>
