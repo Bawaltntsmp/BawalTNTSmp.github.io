@@ -14,7 +14,7 @@
 </div>
 <div class="loader">
   <img class="imgloader" src="loader.png">
-  <p class="textloader">BTSMP - FLIGHNE</p>
+  <p class="textloader">BTSMP From FLIGHNE</p>
 
 </div>
 
@@ -446,8 +446,8 @@ color: rgb(228, 226, 226);
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 104vw;
+  height: 105vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -465,8 +465,8 @@ color: rgb(228, 226, 226);
   content: "";
   width: 75px;
   height: 75px;
-  border: 15px solid #dddddd;
-  border-top-color: #009578;
+  border: 15px solid #FAD7A0;
+  border-top-color: #FFBF00;
   border-radius: 50%;
   animation: loading .4s ease infinite;
 }
@@ -585,34 +585,7 @@ color: rgb(228, 226, 226);
   z-index: 99999;
 }
 
-.loader--hidden {
-  opacity: 0;
-  visibility: hidden;
-}
 
-.loader::after {
-  content: "";
-  width: 75px;
-  height: 75px;
-  border: 15px solid #dddddd;
-  border-top-color: #FFBF00;
-  border-radius: 50%;
-  animation: loading .4s ease infinite;
-}
-.textloader{
-  color: #dddddd;
-}
-
-@keyframes loading {
-  from {
-    transform: rotate(0turn);
-  }
-  to {
-    transform: rotate(1turn);
-  }
-}
-
-}
 </style>
 </div>
 
