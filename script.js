@@ -79,7 +79,6 @@ function checker2(){
     var preloader = document.getElementById("preloader");
     preloader.style.display = "none";
   });
-
   window.addEventListener("load", () => {
     const loader = document.querySelector(".loader");
   
