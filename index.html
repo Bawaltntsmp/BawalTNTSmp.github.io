@@ -203,13 +203,18 @@ p {
 font-size: 30px;}
 
 div.content{
-
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+width: fit-content;
+display: flex;
+position: relative;
 background-color:#229954;
 font-size: 20px;
 border:1px solid #17202A;
-border-radius: 20px;
+border-radius: 5px;
 float: center-left;
-margin:20px;
+
 }
 
 div#first {
@@ -637,6 +642,31 @@ border-radius: 0.2em;
   opacity: 1;
 }
 
+.Custom1-hr{
+  border: none;
+  height: 5px;
+  background-color: #FFBF00; /* Change this to the color you want */
+  margin: 20px 0; /* Adjust this to control the margin above and below the hr */
+}
+.dropdown ul {
+  background-color: #21618C;
+  display: none;
+  position: absolute;
+  margin-top: 0%;
+  margin-left: 0%;
+}
+
+.dropdown:hover ul {
+  display: block;
+}
+
+.dropdown ul li {
+  display: block;
+}
+
+.dropdown ul li a {
+  padding: 20px;
+}
 </style>
 
 <!-- The Real Thing Starts Here -->
@@ -661,14 +691,19 @@ border-radius: 0.2em;
         </select>
     </div>
 <li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Go Home"><a href="#"><ion-icon name="home-outline"></ion-icon> Home</a></li>
-<li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Socials"><a onclick="checker()" class="btn btn-default" href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
+<li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Socials"><a onclick="checker()" class="btn btn-default" href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492" target="_blank"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
 <li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Creators"><a href="Creator.html"><ion-icon name="people-outline"></ion-icon> Creators</a></li>
-<li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Discord"><a onclick="checker()" class="btn btn-default" href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
-<li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="IP Adress & FeedBack Form"><a href="IP Adress.html"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a></li>
-</ul>
+<li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Discord"><a onclick="checker()" class="btn btn-default" href="https://discord.gg/q5UHbjwCfp" target="_blank"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
+<li class="dropdown" onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#21618C')" title="IP Adress & FeedBack Form">
+    <a href="IP Adress.html"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a>
+    <ul>
+       <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#21618C')"><a href="Shoutout.html">Shoutouts</a></li>
+    </ul>
+    </li>
 </nav>
 
-<hr>
+<hr class="Custom1-hr">
+
 
 <div class="tooltip0">
 <button id="go-up-button" onclick="scrollToTop()"><i class="fas fa-angle-double-up"></i></button>
@@ -680,15 +715,16 @@ border-radius: 0.2em;
 <a onclick="checker()" class="btn btn-default" href="https://storyzink.com/m/gd393024?s=2" target="_blanc">
 <div class="content" id="first" title="Message Us"><ion-icon name="megaphone-outline"></ion-icon>Message Us!<ion-icon name="megaphone-outline"></ion-icon></div>
 </a>
-
+<br>
 <a onclick="checker()" class="btn btn-default" href="https://www.youtube.com/channel/UC61VXfPklBBMO64Ihx6cRkg">
 <div class="content" id="second" title="Youtube"><ion-icon name="logo-youtube"></ion-icon> Youtube <ion-icon name="logo-youtube"></ion-icon></div>
 </a>
-
+<br>
 <a onclick="checker2()" class="btn btn-default" href="#" target="_blanc">
 <div class="content" id="third" title="Nothing To See Here"><ion-icon name="construct-outline"></ion-icon> *IN MAINTENANCE * <ion-icon name="construct-outline"></ion-icon></div>
 </a>
-
+<br>
+<hr class="Custom1-hr">
 <img src="MC1.png" alt="Image Here" class="ImgMain">
 
 <h4>Server Admin</h4>
@@ -776,7 +812,7 @@ border-radius: 0.2em;
     <br>
     <li>6. Added BTSMP Trailer Video</li>
     <br>
-    <li>7. Fixed Colors In Website</li>
+    <li>7. Added The Shoutouts Page In IP Adress Button in Navigation Bar</li>
     </c>
     </text9>
 <h4 onmouseover="changeText(this, 'Trailer Edited By: FLIGHNE')" onmouseout="changeText(this, 'SMP Video Trailer')"> SMP Video Trailer </h4>
@@ -801,7 +837,7 @@ border-radius: 0.2em;
     </ul>
     </div>
     <div class="footer-bottom">
-<d>copyright &copy;2023 BawalTNTSmp.github.io designed by <span><z class="tooltip1" data-tooltip="Website Creator">FLIGHNE</z></span> </d>
+<d>copyright &copy; 2023 BawalTNTSmp.github.io designed by <span><z class="tooltip1" data-tooltip="Website Creator">FLIGHNE</z></span> </d>
     </div>
     </footer>
     </body>

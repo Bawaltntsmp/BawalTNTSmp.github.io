@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+ <script src="script.js"></script>
+<title>Shoutouts - BTSMP</title>
+<link rel="icon" href="favicon-32x32.png"/>
+
+ <body>
+
+    <div class="tooltip2">
+        Hover over me For Information of This Page
+        <span class="tooltiptext">This Page Is For Shoutouts We Will Delete Data Every Year.</span>
+      </div>
+      <div class="loader">
+        <img class="imgloader" src="loader.png">
+        <p class="textloader">BTSMP - FLIGHNE</p>
+
+      </div>
+   
+<style>
+  :root {
+    /* Dark Theme */
+    --dark-background-color: #37474f;
+    --dark-background-color-alt: #222222;
+    --dark-trim-color: #333333;
+    --dark-text-color: #eeeeee;
+
+    /* Light Theme */
+    --background-color: #FAEBD7;
+    --background-color-alt: #eeee;
+    --trim-color: #dddd;
+    --text-color: #333;
+} 
+body{
+    --background-color:	#FAEBD7;
+    --background-color-alt: #eeee;
+    --trim-color: #dddd;
+    --text-color: #333;
+    background: var(--background-color);
+width: 100%;
+height: 240vh;
+background-repeat: no-repeat;
+background-size:cover;
+background-position: center;
+}
+
+body.theme-dark {
+    --background-color: var(--dark-background-color);
+    --background-color-alt: var(--dark-background-color-alt);
+    --trim-color: var(--dark-trim-color);
+    --text-color: #eeee;
+}
+
+@media (prefers-color-scheme: dark) {
+    body.theme-auto {
+        --background-color: var(--dark-background-color);
+        --background-color-alt: var(--dark-background-color-alt);
+        --trim-color: var(--dark-trim-color);
+        --text-color: var(--dark-text-color);
+    }
+}
+
+.select {
+    font-size: 30px;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 8px;
+    border-radius: 10px;
+}
+.select__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 7px 14px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    font-weight: 500;
+    font-family: var();
+}
+
+.select__input option {
+    color: #000000;
+}
+
+    .tooltip2 {
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      justify-content: center;
+  position: relative;
+  display: flex;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+}
+
+.tooltip2 .tooltiptext {
+  left: 105%;
+  top: 0%;
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip2:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  z-index: 99999;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #009578;
+  border-radius: 50%;
+  animation: loading .4s ease infinite;
+}
+.textloader{
+  color: #dddddd;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.dropdown ul {
+  background-color: #116C07;
+  display: none;
+  position: absolute;
+  margin-top: 52.5%;
+  margin-left: 74.3%;
+}
+
+.dropdown:hover ul {
+  display: block;
+}
+
+.dropdown ul li {
+  display: block;
+}
+
+.dropdown ul li a {
+  padding: 20px;
+}
+nav{
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+background: #116C07
+}
+
+nav.logo{
+display: flex;
+align-items: center;
+
+}
+
+.navbar ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+ul{
+  font-size: 20px;
+text-align:center;
+text-decoration: transparent;
+}
+.navbar li {
+display:inline-block;
+transition: all .3s ease;
+}
+.navbar a{
+text-decoration: none;
+color:#FFBF00;
+width:200px;
+display:block;
+padding:30px 20px;
+font-size: 20px;
+text-transform: uppercase;
+font-weight: bold;
+}
+footer {
+    position: sticky;
+    bottom: 0;
+    top: 100%;
+background: #111;
+height: auto;
+width: 100%;
+font-family: Open Sans;
+padding-top: 30px;
+color: #fff;
+}
+.footer-bottom{
+    background: #000000;
+    width: 50%;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    cursor: pointer;
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+
+.content-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.content-footer {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1rem;
+}
+
+.content-footer p6{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.Socials {
+list-style: none;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 1rem 0 3rem 0;
+}
+
+.Socials :hover  {
+    color: aqua;
+    transform: scale(1.4);
+}
+
+.Socials li{
+margin: 0 10px;
+transition: transform .2s ease-in-out;
+}
+
+.Socials a {
+    text-decoration: none;
+    color: #FFBF00;
+    
+}
+.Socials a i {
+    font-size: 1.1rem;
+}
+
+.footer-bottom{
+    background: #000000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    cursor: pointer;
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+.tooltip1 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+}
+
+.tooltip1 .tooltiptext1 {
+    bottom: 20px;
+    left: -30px;
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip1:hover .tooltiptext1 {
+  visibility: visible;
+}
+.Costom1-hr{
+  border: none;
+  height: 5px;
+  background-color: #FFBF00; /* Change this to the color you want */
+  margin: 20px 0; /* Adjust this to control the margin above and below the hr */
+}
+.Name{
+  background: crimson;
+font-size: 25px;
+color: whitesmoke;
+margin-left: 10%;
+margin-right: auto;
+}
+img.aj {
+  margin-top: 2%;
+ margin-left: 5%;
+width: 500px;
+height: 577px;
+}
+.image {
+  margin-top: 20%;
+  margin-bottom: 20%;
+  margin-left: 20%;
+	position: relative;
+	width: 400px;
+  height: 478.5px;
+}
+
+.phonegif {
+	display: block;
+	width: 100%;
+  border-radius: 50px;
+}
+
+.image__overlay {
+  border-radius: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 148.5%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ffffff;
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+	backdrop-filter: blur(5px);
+}
+
+.image__overlay--primary {
+	background: #FFBF00;
+}
+
+.image__overlay>* {
+	transform: translateY(20px);
+	transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+	opacity: 1;
+}
+
+.image__overlay:hover>* {
+	transform: translateY(0);
+}
+
+.click {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.image__description {
+	font-size: 1.25em;
+	margin-top: 0.25em;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+</style>
+<nav>
+  <label class="logo"></label>
+  <ul class="navbar">
+      <div class="select">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+          <select class="select__input" id="selTheme" title="Change Theme">
+              <option value="auto">Auto</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+          </select>
+      </div>
+  <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#116C07')" title="Go Home"><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
+  <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#116C07')" title="Socials"><a onclick="checker()" class="btn btn-default" href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492" target="_blank"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
+  <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#116C07')" title="Creators"><a href="Creator.html"><ion-icon name="people-outline"></ion-icon> Creators</a></li>
+  <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#116C07')" title="Discord"><a onclick="checker()" class="btn btn-default" href="https://discord.gg/q5UHbjwCfp" target="_blank"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
+  <li class="dropdown" onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#116C07')" title="IP Adress & FeedBack Form">
+  <a href="IP Adress.html"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a>
+  <ul>
+     <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#116C07')"><a href="Shoutout.html">Shoutouts</a></li>
+  </ul>
+  </li>
+  </nav>
+<hr class="Costom1-hr">
+<text class="Name">1. AJ Apoli***** - March 1</text>
+<br>
+<img class="aj" src="AJ BOY.png">
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+<hr class="Costom1-hr">
+<div class="image">
+  <a href="https://storyzink.com/m/gd393024?s=2" target="_blank">
+  <img class="phonegif" src="Phone1.gif" alt="Bricks">
+  <div class="image__overlay image__overlay--primary">
+    <div class="Click">Hover | Click Me</div>
+    <p class="image__description">
+      Click To Chat Us Regarding This!
+      Or Email Us: BawalTNTSmp@gmail.com
+    </p>
+  </div>
+</a>
+</div>
+
+  <footer>
+    <div class="content-footer">
+    <h6><ion-icon name="checkmark-done-circle-outline"></ion-icon> Bawal TNT SMP Website &trade; <ion-icon name="checkmark-done-circle-outline"></ion-icon></h6>
+
+<img src="qr2.png" style="width: 5rem;height: 5rem;" />
+    <p6><ion-icon name="create"></ion-icon> " Your birthday is the beginning of your own personal new year. Your first birthday was a beginning, and each new birthday is a chance to begin again, to start over, to take a new grip on life. — Wilfred Peterson" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
+    <p7><i class="fa-solid fa-house-signal"></i> Connect With Us <i class="fa-solid fa-house-signal"></i></p7>
+    <ul class="Socials">
+    <li title="Medal.TV"><a href="https://medal.tv/u/FLIGHNE"><i class="fa-solid fa-medal"></i></a></li>
+    <li><a href="https://www.youtube.com/channel/UC61VXfPklBBMO64Ihx6cRkg"><ion-icon name="logo-youtube"></ion-icon></a></li>
+    <li><a href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon></a></li>
+    <li><a href="https://www.twitch.tv/flighne"><ion-icon name="logo-twitch"></ion-icon></a></li>
+    <li><a href="https://twitter.com/FLIGHNE7"><ion-icon name="logo-twitter"></ion-icon></a></li>
+    </ul>
+    </div>
+    <div class="footer-bottom">
+            <d>copyright &copy; 2023 BawalTNTSmp.github.io designed by <div class="tooltip1"><span>FLIGHNE</span><span2 class="tooltiptext1"> Website Creator</span2> </div></d>
+    </div>
+    </footer>
+
+</body>
+</html>

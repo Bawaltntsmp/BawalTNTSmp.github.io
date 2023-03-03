@@ -70,7 +70,6 @@ background: #A62C22
 
 .navbar ul {
 list-style: none;
-background:#9FE2BF;
 padding: 0;
 margin: 0;
 }
@@ -88,7 +87,25 @@ font-size: 20px;
 text-transform: uppercase;
 font-weight: bold;
 }
+.dropdown ul {
+  background-color: #A62C22;
+  display: none;
+  position: absolute;
+  margin-top: 0%;
+  margin-left: 0%;
+}
 
+.dropdown:hover ul {
+  display: block;
+}
+
+.dropdown ul li {
+  display: block;
+}
+
+.dropdown ul li a {
+  padding: 20px;
+}
 body {
     --background-color:	#FAEBD7;
     --background-color-alt: #eeee;
@@ -283,13 +300,13 @@ form {
     margin-right: auto;
     margin-top: 50px;
     margin-bottom: 10rem;
-background: #808080;
+background: #A2A2A2;
 display: flex;
 flex-direction: column;
 padding: 2vw 4vw;
 width: 90%;
 max-width: 600px;
-border-radius: 10px;
+border-radius: 30px;
 }
 form h5{
     font-size: 30px;
@@ -303,7 +320,7 @@ form input, form textarea {
     margin: 10px 0;
    padding: 20px;
    outline: none;
-   background: #A9A9A9; 
+   background: #DFDFDF; 
    font-size: 16px;
 }
 form button {
@@ -372,7 +389,7 @@ select {
 font-family: 'Bebas Neue', cursive;
 width: auto;
 height: 3.5rem;
-background: #A9A9A9;
+background: #DFDFDF;
 border-radius: 20px;
 }
 
@@ -585,7 +602,6 @@ color: rgb(228, 226, 226);
   z-index: 99999;
 }
 
-
 </style>
 </div>
 
@@ -605,10 +621,15 @@ color: rgb(228, 226, 226);
         </select>
     </div>
 <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Go Home"><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
-<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Socials"><a onclick="checker()" class="btn btn-default" href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
+<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Socials"><a onclick="checker()" class="btn btn-default" href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492" target="_blank"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
 <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Creators"><a href="Creator.html"><ion-icon name="people-outline"></ion-icon> Creators</a></li>
-<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Discord"><a onclick="checker()" class="btn btn-default" href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
-<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="IP Adress & Feedback Form"><a href="#"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a></li>
+<li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Discord"><a onclick="checker()" class="btn btn-default" href="https://discord.gg/q5UHbjwCfp" target="_blank"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
+<li class="dropdown" onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="IP Adress & FeedBack Form">
+<a href="IP Adress.html"><ion-icon name="barcode-outline"></ion-icon> IP ADRESS</a>
+  <ul>
+     <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')"><a href="Shoutout.html">Shoutouts</a></li>
+  </ul>
+  </li>
 </nav>
 
 <div class="tooltip0">
@@ -718,7 +739,7 @@ color: rgb(228, 226, 226);
     </ul>
     </div>
     <div class="footer-bottom">
-            <d>copyright &copy;2023 BawalTNTSmp.github.io designed by <div class="tooltip1"><span>FLIGHNE</span><span2 class="tooltiptext1"> Website Creator</span2> </div></d>
+            <d>copyright &copy; 2023 BawalTNTSmp.github.io designed by <div class="tooltip1"><span>FLIGHNE</span><span2 class="tooltiptext1"> Website Creator</span2> </div></d>
     </div>
     </footer>
 
