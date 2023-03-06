@@ -316,6 +316,49 @@ transition: transform .2s ease-in-out;
     opacity: .4;
     font-weight: 200;
 }
+.footertext {
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.col-1, .col-2 {
+  flex-basis: 50%;
+  margin-inline: 100px;
+}
+.games {
+  line-height: 45px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footertext .games{
+  list-style-type: none;
+  vertical-align: middle;
+}
+.footertext li{
+    text-align:unset;
+    white-space: nowrap;
+}
+.footertext a{
+    text-decoration: none;
+}
+
+.foottext {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  justify-content: center;
+
+}
+.games :hover  {
+    color: #9FE2BF;
+    transform: scale(1.4);
+    transition: all .2s ease-in-out;
+}
+.footertext a {
+    color: #fde400;
+}
 .tooltip1 {
   position: relative;
   display: inline-block;
@@ -493,6 +536,25 @@ height: 577px;
     <li><a href="https://www.twitch.tv/flighne"><ion-icon name="logo-twitch"></ion-icon></a></li>
     <li><a href="https://twitter.com/FLIGHNE7"><ion-icon name="logo-twitter"></ion-icon></a></li>
     </ul>
+    <div class="footertext">
+      <div class="col-1">
+        <div class="foottext">Games</div>
+        <ul class="games">
+          <li><a href="https://www.minecraft.net/en-us" target="_blank">Minecraft</a></li>
+          <li><a href="https://www.riotgames.com/en" target="_blank">Valorant</a></li>
+          <li><a href="https://www.roblox.com/home" target="_blank">Roblox</a></li>
+        </ul>
+      </div>
+
+      <div class="col-2">
+        <div class="foottext">Help</div>
+        <ul class="games">
+          <li><a href="https://sites.google.com/view/btsmp-about-us/about-us?authuser=0" target="_blank">About Us</a></li>
+          <li class="discord"><a href="https://discord.gg/q5UHbjwCfp"target="_blank"> Discord</a></li>
+          <li><a href="FeedBack Forms.html" target="_blank">Feedback Forms</a></li>
+        </ul>
+      </div>
+      </div>
     </div>
     <div class="footer-bottom">
             <d>copyright &copy; 2023 BawalTNTSmp.github.io designed by <div class="tooltip1"><span>FLIGHNE</span><span2 class="tooltiptext1"> Website Creator</span2> </div></d>

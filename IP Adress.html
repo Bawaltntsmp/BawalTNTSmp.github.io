@@ -428,7 +428,7 @@ justify-content: center;
 .tooltip{
     display: inline-block;
 }
-h6 {
+.container4 h6 {
 font-size: 20px;
 margin-top: -6%;
 color: rgb(228, 226, 226);
@@ -601,6 +601,87 @@ color: rgb(228, 226, 226);
   transition: opacity 4s, visibility 2s;
   z-index: 99999;
 }
+}
+.ipbutton button{
+  width: fit-content;
+  display: block;
+margin-left: auto;
+margin-right: auto;
+align-items: center;
+text-align: center;
+justify-content: center;
+/* IP Button */
+  padding: 15px;
+    background-color: #ECFF00;
+    color: #000000;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+    bottom: 20%;
+    transition: transform .2s ease-in-out;
+}
+.ipbutton button:hover {
+    background: #bbc075;
+    transform: scale(1.3);
+}
+.ipbutton text{
+  width: 350px;
+  padding: 15px;
+  background: #FFBF00;
+  display: block;
+margin-left: auto;
+margin-right: auto;
+border: 2px dotted #000000;
+border-radius: 20px;
+}
+
+.footertext {
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.col-1, .col-2 {
+  flex-basis: 50%;
+  margin-inline: 100px;
+}
+.games {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footertext .games{
+  list-style-type: none;
+  vertical-align: middle;
+}
+.footertext li{
+    text-align:unset;
+    white-space: nowrap;
+}
+.footertext a{
+    text-decoration: none;
+}
+
+.foottext {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  justify-content: center;
+
+}
+.games :hover  {
+    color: #9FE2BF;
+    transform: scale(1.4);
+    transition: all .2s ease-in-out;
+}
+.footertext a {
+    color: #fde400;
+}
+
+}
 
 </style>
 </div>
@@ -723,6 +804,13 @@ color: rgb(228, 226, 226);
   </form>
 </div>
 
+<div class="ipbutton">
+  <text>Or Click This Button To Go to "FeedBack Forms"</text>
+<button>Click Me</button>
+</div>
+
+<br>
+
 <footer>
     <div class="content-footer">
     <h6><ion-icon name="checkmark-done-circle-outline"></ion-icon> Bawal TNT SMP Website &trade; <ion-icon name="checkmark-done-circle-outline"></ion-icon></h6>
@@ -737,6 +825,25 @@ color: rgb(228, 226, 226);
     <li><a href="https://www.twitch.tv/flighne"><ion-icon name="logo-twitch"></ion-icon></a></li>
     <li><a href="https://twitter.com/FLIGHNE7"><ion-icon name="logo-twitter"></ion-icon></a></li>
     </ul>
+    <div class="footertext">
+      <div class="col-1">
+        <div class="foottext">Games</div>
+        <ul class="games">
+          <li><a href="https://www.minecraft.net/en-us" target="_blank">Minecraft</a></li>
+          <li><a href="https://www.riotgames.com/en" target="_blank">Valorant</a></li>
+          <li><a href="https://www.roblox.com/home" target="_blank">Roblox</a></li>
+        </ul>
+      </div>
+
+      <div class="col-2">
+        <div class="foottext">Help</div>
+        <ul class="games">
+          <li><a href="https://sites.google.com/view/btsmp-about-us/about-us?authuser=0" target="_blank">About Us</a></li>
+          <li class="discord"><a href="https://discord.gg/q5UHbjwCfp"target="_blank"> Discord</a></li>
+          <li><a href="FeedBack Forms.html" target="_blank">Feedback Forms</a></li>
+        </ul>
+      </div>
+      </div>
     </div>
     <div class="footer-bottom">
             <d>copyright &copy; 2023 BawalTNTSmp.github.io designed by <div class="tooltip1"><span>FLIGHNE</span><span2 class="tooltiptext1"> Website Creator</span2> </div></d>
