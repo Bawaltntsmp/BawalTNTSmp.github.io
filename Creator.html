@@ -483,6 +483,227 @@ border-radius: 0.2em;
 .footertext a {
     color: #fde400;
 }
+/* The Box */
+.container3 .box {
+  top: 20%;
+  bottom: 0;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: cyan;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.container3 .box h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.container3 .box p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+/* The 3 Box */
+.container2
+ {
+position: relative;
+width: 1200px;
+height: 300px;
+margin: 240px auto;
+} 
+.container2 .box
+{
+  position: relative;
+width: calc(400px - 30px);
+height: calc(300px - 30px);
+background: #000;
+float: left;
+margin: 15px;
+box-sizing: border-box;
+overflow: hidden;
+border-radius: 10px;
+
+}
+.container2 .box .icon
+{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: #f00;
+transition: 0.5s;
+z-index: 1;
+}
+.container2 .box:hover .icon
+{
+top: 20px;
+left: calc(50% - 40px);
+width: 80px;
+height: 80px;
+border-radius: 50%;
+}
+
+.container2 .box .icon .fa-solid
+{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+font-size: 80px;
+transition: 0.5s;
+color: #fff;
+}
+.container2 .box:hover .icon .fa-solid
+{
+  font-size: 40px;
+}
+.container2 .box .content1
+{
+  position: absolute;
+  top: 100%;
+  height: calc(100% - 100px);
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  opacity: 0;
+}
+.container2 .box:hover .content1
+{
+top: 100px;
+opacity: 1;
+}
+.container2 .box .content1 h3
+{
+margin: 0;
+padding: 0;
+color: whitesmoke;
+font-size: 24px;
+}
+.container2 .box .content1 p
+{
+  margin: 0;
+padding: 0;
+color: #fff;
+}
+ 
+.container2 .box:nth-child(1) .icon
+{
+background: #319635;
+}
+.container2 .box:nth-child(1)
+{
+  background: #4caf50;
+}
+/* Second Box */
+.container2 .box:nth-child(2) .icon
+{
+background: #d03852;
+}
+.container2 .box:nth-child(2)
+{
+  background: #f54967;
+}
+/* Third Box */
+.container2 .box:nth-child(3) .icon
+{
+background: #23798e;
+}
+.container2 .box:nth-child(3)
+{
+  background: #328fa5;
+}
+.wrapper1
+{
+display: flex;
+padding-top: 50px;
+justify-content: center;
+}
+.collapsible 
+{
+max-width: 900px;
+overflow: hidden;
+font-weight: 500;
+}
+.collapsible input
+{
+  display: none;
+}
+.collapsible label
+{
+position: relative;
+font-weight: 600;
+background: aquamarine;
+box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .08);
+color: black;
+display: block;
+margin-bottom: 10px;
+cursor: pointer;
+padding: 15px;
+border-radius: 4px;
+}
+.collapsible label::after
+{
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  width: 18px;
+  height: 18px;
+  background: url(arrow.svg);
+  transition: all 0.3s ease;
+}
+.collapsible input:checked + label:after
+{
+transform: rotate(90deg);
+}
+
+.collapsible-text 
+{
+  max-height: 1px;
+  overflow: hidden;
+  border-radius: 4px;
+  line-height: 1.4;
+  position: relative;
+  top: -100%;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+.collapsible input:checked ~ .collapsible-text
+{
+max-height: 300px;
+padding-bottom: 25px;
+background: blanchedalmond;
+box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1),0 4px 11px 0 rgba(0, 0, 0, .08);
+opacity: 1;
+top: 0;
+}
+.collapsible-text h2
+{
+margin-bottom: 10px;
+padding: 15px 15px 0;
+color: orange;
+
+}
+.collapsible-text p
+{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
 
 </style>
 
@@ -507,6 +728,63 @@ border-radius: 0.2em;
 <p4>OLDIES a Group Of Friend Who Are Friends For 11 years Now, And Created This Server To Be Able To Play With Each Other And To Make More Friends</p4>
 <p4>Members: FLIGHNE, ELI, UZI, BOGART, MIDNIGHT_RAVEN, XANDRA</p4>
 <br>
+
+
+
+<!-- The 3 None Hover Box -->
+<div class="container3">
+<div class="box">
+  <h2>Want To Know About Us?</h2>
+  <p>Kindly Hover Over The First Box Below This 3 Box To know More About Us Or Click The About US In The Footer.</p>
+</div>
+</div>
+
+<div class="wrapper1">
+  <div class="collapsible">
+    <input type="checkbox" id="collapsible-head">
+    <label for="collapsible-head"> How To Join? </label>
+    <div class="collapsible-text">
+      <h2>How To Join?</h2>
+      <p>Copy The IP Adress From The IP Adress Page Ang Paste It In The Multiplayer IP Adress TextArea And Click Join. Note: Server May Be Down Sometimes Due To OverLoad.</p>
+      </div>
+  </div>
+  </div>
+
+<!-- The 3 Box -->
+<div class="container2">
+ <div class="box">
+<div class="icon"><i class="fa-solid fa-circle-question"></i></div>
+<div class="content1">
+  <h3>About Us</h3>
+  <p>We Are A Goup of Friend Compost Of Atleast 10 Persons, We Want To Make New Friends So We Desided To Create A SMP "Survival Multiplayer" Minecraft Server</p>
+</div>
+ </div>
+  <div class="box">
+ <div class="icon"><i class="fa-solid fa-earth-asia"></i></div>
+ <div class="content1">
+   <h3>Where Are We From?</h3>
+   <p>Our Group Came From ASIA Dont Want To Specify The Country || Our Languange Are English</p>
+ </div>
+  </div>
+    <div class="box">
+   <div class="icon"><i class="fa-solid fa-code"></i></div>
+   <div class="content1">
+     <h3>Who Made The Website?</h3>
+     <p>Hi I'm FLIGHNE I Play Games Speacially Valorant, Minecraft, Roblox, ETC. | I Just Tried Coding And Created This Website For Fun 😀</p>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
