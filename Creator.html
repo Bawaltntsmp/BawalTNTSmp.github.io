@@ -507,6 +507,8 @@ border-radius: 0.2em;
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 0;
+  margin-right: 5px;
+  padding-left: 15px;
 }
 
 
@@ -517,8 +519,7 @@ border-radius: 0.2em;
 /* The 3 Box */
 .container2
  {
-  display: block;
-align-items: center;
+  display: flex;
 justify-content: center;
 position: relative;
 width: 1000px;
@@ -631,85 +632,90 @@ background: #23798e;
 
 /* DropDown Question */
 
-.wrapper1
-{
-display: flex;
-padding-top: 50px;
-align-items: center;
-justify-content: center;
-}
-.collapsible 
-{
-max-width: 900px;
-overflow: hidden;
-font-weight: 500;
-}
-.collapsible input
-{
-  display: none;
-}
-.collapsible label
-{
-position: relative;
-font-weight: 600;
-background: aquamarine;
-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .08);
-color: black;
-display: block;
-margin-bottom: 10px;
-cursor: pointer;
-padding: 15px;
-border-radius: 4px;
-}
-.collapsible label::after
-{
-  content: "";
-  position: absolute;
-  right: 15px;
-  top: 20px;
-  width: 18px;
-  height: 18px;
-  background: url(arrow.svg);
-  transition: all 0.3s ease;
-}
-.collapsible input:checked + label:after
-{
-transform: rotate(90deg);
-}
+.wrapper1, .wrapper2, .wrapper3
+   {
+    display: flex;
+    padding-top: 50px;
+    align-items: center;
+    justify-content: center;
+  }
 
-.collapsible-text 
-{
-  max-height: 1px;
-  overflow: hidden;
-  border-radius: 4px;
-  line-height: 1.4;
-  position: relative;
-  top: -100%;
-  opacity: 0.5;
-  transition: all 0.3s ease;
-}
-.collapsible input:checked ~ .collapsible-text
-{
-max-height: 300px;
-padding-bottom: 25px;
-background: blanchedalmond;
-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1),0 4px 11px 0 rgba(0, 0, 0, .08);
-opacity: 1;
-top: 0;
-}
-.collapsible-text h2
-{
-margin-bottom: 10px;
-padding: 15px 15px 0;
-color: orange;
+  .collapsible {
+    max-width: 1000px;
+    overflow: hidden;
+    font-weight: 500;
+  }
+ 
+  .collapsible a
+  {
+    color: #f00;
+    text-decoration: none;
+  }
 
-}
-.collapsible-text p
-{
-  padding-left: 15px;
-  padding-right: 15px;
-}
+  .collapsible input {
+    display: none;
+  }
 
+  .collapsible label {
+    position: relative;
+    font-weight: 600;
+    background: #328fa5;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+  .collapsible label::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    width: 18px;
+    height: 18px;
+    background: url(Arrow.svg);
+    transition: all 0.3s ease;
+  }
+
+  .collapsible input:checked + label::after {
+    transform: rotate(90deg);
+  }
+
+  .collapsible-text {
+    text-decoration: none;
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+
+  .collapsible input:checked ~ .collapsible-text {
+    max-height: 300px;
+    padding-bottom: 25px;
+    background: #31b9d8;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+    opacity: 1;
+    top: 0;
+  }
+
+  .collapsible-text h2 {
+    margin-bottom: 10px;
+    padding: 15px 15px 0;
+    color: #000;
+    font-weight: bold;
+  }
+
+  .collapsible-text p {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
 
 </style>
@@ -746,16 +752,20 @@ color: orange;
 </div>
 </div>
 
+
+<!-- The Collapsible Button -->
+<div class="container1">
 <div class="wrapper1">
   <div class="collapsible">
-    <input type="checkbox" id="collapsible-head">
-    <label for="collapsible-head"> How To Join? </label>
+    <input type="checkbox" id="collapsible-head1">
+    <label for="collapsible-head1"> Connect With Us By Our Soicials! </label>
     <div class="collapsible-text">
-      <h2>How To Join?</h2>
-      <p>Copy The IP Adress From The IP Adress Page Ang Paste It In The Multiplayer IP Adress TextArea And Click Join. Note: Server May Be Down Sometimes Due To OverLoad.</p>
+      <h2>Follow Me On Twitch</h2>
+      <p>Twitch: Twitch.tv/FLIGHNE - We Stream & Play Games Come And Join Us! Join Our Discord To Be Part of Some Parlor Games!</p>
       </div>
   </div>
   </div>
+</div>
 
 <!-- The 3 Box -->
 <div class="container2">

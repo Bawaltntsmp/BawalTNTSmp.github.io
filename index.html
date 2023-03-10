@@ -452,15 +452,18 @@ h1{
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  
+  left: 50%;
   font-size: 16px;
   background-color: whitesmoke;
   color: #111;
   border: 3px solid #000000;
   border-radius: 50%;
-  padding: 12px 16px;
+  padding: 13px 16px;
   cursor: pointer;
-  transition: opacity 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  transform: translateX(-50%);
+  
 }
 
 #go-up-button:hover {
@@ -468,9 +471,24 @@ h1{
 }
 
 #go-up-button.show {
-  display: block;
+  display: flex;
+  margin: 10px, 10px;
   opacity: 1;
 }
+#go-up-button.show .loader {
+  display: flex;
+  flex-direction: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 1000vh;
+  display: flex;
+  background: #333333;
+  transition: opacity 4s, visibility 2s;
+  z-index: 9999;
+}
+
 .banner {
     width: 100%;
     position: relative;
@@ -620,14 +638,16 @@ border-radius: 0.2em;
   opacity: 1;
 }
 .tooltip0 {
-  position: relative;
-  display: inline-block;
+display: inline-block;
   border-bottom: 1px dotted black;
   cursor: pointer;
+ 
+
 }
 
 .tooltip0 .tooltiptext3 {
-    left: 1750px;
+  right: auto;
+  left: 47%;
     bottom: 70px;
   visibility: hidden;
   width: 100px;
@@ -636,8 +656,8 @@ border-radius: 0.2em;
   text-align: center;
   border-radius: 6px;
   padding: 3px 0;
-  position: inherit;
-  z-index: 1;
+  position: fixed;
+  z-index: 9999;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
@@ -646,7 +666,6 @@ border-radius: 0.2em;
   visibility: visible;
   opacity: 1;
 }
-
 .Custom1-hr{
   border: none;
   height: 5px;
@@ -715,6 +734,99 @@ border-radius: 0.2em;
 }
 
 
+/* Collapsible Dropdown */
+.wrapper1
+   {
+    display: flex;
+    padding-top: 50px;
+  }
+.container1 label:nth-child(1)
+{
+  background: #007CF7;
+}
+
+
+  .collapsible {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    font-weight: 500;
+  }
+  .collapsible a
+  {
+    color: #f00;
+    text-decoration: none;
+  }
+
+  .collapsible input {
+    display: none;
+  }
+
+  .collapsible label {
+
+    position: relative;
+    font-weight: 600;
+    background: #97907a;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08);
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+  .collapsible label::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    width: 18px;
+    height: 18px;
+    background: url(Arrow.svg);
+    transition: all 0.3s ease;
+  }
+
+  .collapsible input:checked + label::after {
+    transform: rotate(90deg);
+  }
+
+  .collapsible-text {
+    text-decoration: none;
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+
+  .collapsible input:checked ~ .collapsible-text {
+    max-height: 300px;
+    padding-bottom: 25px;
+    background: #f3e6be;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+    opacity: 1;
+    top: 0;
+  }
+
+  .collapsible-text h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 15px 15px 0;
+    color: #000;
+    font-weight: bold;
+  }
+
+  .collapsible-text p {
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
 
 </style>
 
@@ -756,7 +868,7 @@ border-radius: 0.2em;
 
 <div class="tooltip0">
 <button id="go-up-button" onclick="scrollToTop()" title="Go Up"><i class="fas fa-angle-double-up"></i></button>
-<span class="tooltiptext3">  </span>
+<span class="tooltiptext3">Go On Top</span>
 </div>
 
 <title>Bawal TNT SMP</title>
@@ -777,21 +889,30 @@ border-radius: 0.2em;
 <img src="MC1.png" alt="Image Here" class="ImgMain">
 
 <h4>Server Admin</h4>
-<ol>
-<li>Uzi - The Rage One HAHAHAAH ✌</li>
-<br>
-<li>Xandra - The Perfect One</li>
-<br>
-<li>Eli - The Strict One</li>
-<br>
-<li>FLIGHNE - The N/A</li>
-<br>
-<li>Quared - The Stress Maker</li>
-<br>
-<li>Kida - The N/A </li>
-<br>
-<li>Midnight_Raven - The Builder</li>
-</ol>
+
+<div class="container1">
+  <div class="wrapper1">
+    <div class="collapsible">
+      <input type="checkbox" id="collapsible-head1">
+      <label for="collapsible-head1"> Server Admins List </label>
+      <div class="collapsible-text">
+        <h2>Follow Me On Twitch</h2>
+        <p>1. Midnight_Raven - The Builder| 2. Kida - The N/A| 3. Quared - The Stress Maker| 4. FLIGHNE - The Plugin Wizzard| 5. Eli - The Strict One| 6. Xandra - The Perfect One| 7. Uzi - The Rage One HAHAHAAH ✌ </p>
+        </div>
+    </div>
+    </div>
+    <br>
+    <div class="wrapper2">
+      <div class="collapsible">
+        <input type="checkbox" id="collapsible-head2">
+        <label for="collapsible-head2"> Connect With Us By Our Soicials! </label>
+        <div class="collapsible-text">
+          <h2>Follow Me On Twitch</h2>
+          <p>Twitch: Twitch.tv/FLIGHNE - We Stream & Play Games Come And Join Us!</p>
+          </div>
+      </div>
+      </div>
+  </div>
 
 <h4>Why This Server</h4>
 
@@ -834,17 +955,20 @@ border-radius: 0.2em;
 <text9><i class="fa-solid fa-circle-question"></i> In This Part You Can Send Your FeedBack To This Website How You Feel, Did You Find a 
     Hard Time On Navigating Our Website Please Let Us Know By Sending A "Form" To Let Us Know What We Will Improve Thank You! 😀😁 <i class="fa-solid fa-circle-question"></i></text9>
 <h1> <i class="fa-solid fa-question"></i> || How To Send A Form? || <i class="fa-solid fa-question"></i></h1>
-<c>
-<li>1. Go To IP Adress Page And Navigate To The Bottom Part</li>
+
+<div class="container1">
+<div class="wrapper3">
+  <div class="collapsible">
+    <input type="checkbox" id="collapsible-head3">
+    <label for="collapsible-head3"> How To Send FeedBack? </label>
+    <div class="collapsible-text">
+      <h2>Follow Me On Twitch</h2>
+      <p>Step 1: Go To IP Adress Page And Navigate To The Bottom Part Step 2: Fill Up The Box And Click Send Step 3: Wait Until it Says Go Back Then Your Good To Go Step 4: You will Be Notified On Your Given Email Regarding On Your Concern Step 5: Waiting Will Be Within 24 Hours If We Are Not Busy</p>
+      </div>
+  </div>
+  </div>
+  </div>
 <br>
-<li>2. Fill Up The Box And Click Send</li>
-<br>
-<li>3. Wait Until it Says Go Back Then Your Good To Go</li>
-<br>
-<li>4. You will Be Notified On Your Given Email Regarding On Your Concern</li>
-<br>
-<li>5. Waiting Will Be Within 24 Hours If We Are Not Busy</li>
-</c>
 
 <h4><i class="fa-solid fa-file-pen"></i> BTNT 2.5 : ||Whats New?|| <i class="fa-solid fa-file-pen"></i></h4>
 <text9>
@@ -875,7 +999,7 @@ border-radius: 0.2em;
     <div class="content-footer">
     <h6><ion-icon name="checkmark-done-circle-outline"></ion-icon> Bawal TNT SMP Website &trade; <ion-icon name="checkmark-done-circle-outline"></ion-icon></h6>
     <img src="qr2.png" style="width: 5rem;height: 5rem;" />
-    <p6><ion-icon name="create"></ion-icon> "This Website is Updated At 7:08 PM In Febuary 27 2023" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
+    <p6><ion-icon name="create"></ion-icon> "This Website is Updated EveryWeek" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
     <p7 title="Find Us Here"><i class="fa-solid fa-house-signal"></i> Connect With Us <i class="fa-solid fa-house-signal"></i></p7>
     <ul class="Socials">
     <li title="Medal.TV"><a href="https://medal.tv/u/FLIGHNE"><i class="fa-solid fa-medal"></i></a></li>
