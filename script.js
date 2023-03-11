@@ -31,6 +31,8 @@ function applyTheme(theme) {
     });
   });
 
+  
+  
 
 function gotoLink(link){
    console.log(link.value);
@@ -66,6 +68,12 @@ function checker2(){
     });
   }
   
+ 
+  
+
+
+
+
   window.addEventListener("scroll", function() {
     var goUpButton = document.getElementById("go-up-button");
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -74,12 +82,7 @@ function checker2(){
       goUpButton.classList.remove("show");
     }
   });
-
-  window.addEventListener("load", function() {
-    var preloader = document.getElementById("preloader");
-    preloader.style.display = "none";
-  });
-  window.addEventListener("load", () => {
+    window.addEventListener("load", () => {
     const loader = document.querySelector(".loader");
   
     loader.classList.add("loader--hidden");
@@ -88,5 +91,9 @@ function checker2(){
       document.body.removeChild(loader);
     });
   });
+
   
+
   
+
+        
