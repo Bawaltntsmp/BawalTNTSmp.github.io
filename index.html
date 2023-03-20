@@ -9,16 +9,24 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="static/scripts/responses.js"></script>
+<script src="static/scripts/chat.js"></script>
+
+<script src="java2.js"></script>
 
 </div>
 <div class="loader">
   <img class="imgloader" src="loader.png">
   <p class="textloader">BTSMP From FLIGHNE</p>
-
 </div>
+
+
+
 
 <!-- Style Part Is This Part -->
 <style>
+   
     html {
         scroll-behavior: smooth;
     }
@@ -202,18 +210,32 @@ font-family: }
 p {
 font-size: 30px;}
 
+div.content:hover
+{
+  color: #000000;
+  transform: scale(1.2);
+  text-decoration: underline;
+}
+
+
 div.content{
-    margin-right: auto;
+  color: #292929;
     margin-left: auto;
-    text-align: center;
-width: fit-content;
+    margin-right: auto;
+   padding: 6px 15px;
+   align-items: center;
+   justify-content: center;
+width: 50rem;
 display: flex;
 position: relative;
 background-color:#229954;
 font-size: 20px;
 border:1px solid #17202A;
-border-radius: 5px;
-float: center-left;
+border-radius: 20px;
+transition: all .4s ease-in-out;
+box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+
+
 
 }
 
@@ -461,6 +483,7 @@ h1{
   border-radius: 50%;
   padding: 13px 16px;
   cursor: pointer;
+  z-index: .1;
   transition: all 0.4s ease-in-out;
   transform: translateX(-50%);
   
@@ -584,16 +607,16 @@ border-radius: 0.2em;
 }
 
 .tooltip2 .tooltiptext1 {
-    left: 150px;
+    left: 135px;
     bottom: 25px;
     font-size: 16px;
   visibility: hidden;
-  width: 150px;
+  width: 160px;
   background-color: #555;
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 5px 10px;
   position: absolute;
   z-index: 1;
   opacity: 0;
@@ -867,7 +890,7 @@ display: inline-block;
 <title>Bawal TNT SMP</title>
 
 <a onclick="checker()" class="btn btn-default" href="https://storyzink.com/m/gd393024?s=2" target="_blanc">
-<div class="content" id="first" title="Message Us"><ion-icon name="megaphone-outline"></ion-icon>Message Us!<ion-icon name="megaphone-outline"></ion-icon></div>
+<div class="content" id="first" title="Message Us"><ion-icon name="megaphone-outline"></ion-icon> Message Us! <ion-icon name="megaphone-outline"></ion-icon></div>
 </a>
 <br>
 <a onclick="checker()" class="btn btn-default" href="https://www.youtube.com/channel/UC61VXfPklBBMO64Ihx6cRkg">
@@ -994,6 +1017,7 @@ display: inline-block;
     <img src="qr2.png" style="width: 5rem;height: 5rem;" />
     <p6><ion-icon name="create"></ion-icon> "This Website is Updated EveryWeek" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
     <p7 title="Find Us Here"><i class="fa-solid fa-house-signal"></i> Connect With Us <i class="fa-solid fa-house-signal"></i></p7>
+    <p6>Last Updated: March 20 2023</p6>
     <ul class="Socials">
     <li title="Medal.TV"><a href="https://medal.tv/u/FLIGHNE"><i class="fa-solid fa-medal"></i></a></li>
     <li ><a href="https://www.youtube.com/channel/UC61VXfPklBBMO64Ihx6cRkg"><ion-icon name="logo-youtube"></ion-icon></a></li>
