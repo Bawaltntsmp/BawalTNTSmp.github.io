@@ -92,8 +92,57 @@ function checker2(){
     });
   });
 
+
+
+
   
+  // Update Time
+  function updateTime() {
+    let now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+    let ampm = (hours >= 12) ? "PM" : "AM";
+    hours = hours % 12;
+    hours = (hours == 0) ? 12 : hours;
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+    let timeString = hours + ":" + minutes + ":" + seconds + " " + ampm;
+    document.getElementById("clock").textContent = timeString;
+    setTimeout(updateTime, 1000);
+  }
+  window.onload = function() {
+    updateTime();
+  }
 
   
 
-        
+
+
+
+  function copyText() {
+    var textToCopy = document.getElementById("textToCopy");
+    textToCopy.select();
+    textToCopy.setSelectionRange(0, 99999); // For mobile devices
+    document.execCommand("copy");
+    alert("Copied the text: " + textToCopy.value);
+  }
+
+  // Google
+  function onSignIn(googleUser) {
+    // Get the user's ID token and basic profile information
+    var id_token = googleUser.getAuthResponse().id_token;
+    var profile = googleUser.getBasicProfile();
+    
+    // Send the ID token and profile information to your server for verification and processing
+    // (not shown here)
+  }
+
+      
+  function fetch()
+  {
+var get = document.getElementById("get").value;
+document.getElementById("hex").value = get;
+
+  }
