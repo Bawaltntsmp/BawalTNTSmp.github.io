@@ -371,6 +371,24 @@ transition: transform .2s ease-in-out;
   justify-content: center;
 
 }
+#clock{
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  border: 3px solid #f38e8e;
+  color: #000;
+  background: #ddd;
+  border-radius: 50px;
+  padding:10px 10px;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+
+}
+#clock:hover{
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  color: white;
+  border: 3px solid #ddd;
+  background: #3a3535;
+
+}
 .games :hover  {
     color: #9FE2BF;
     transform: scale(1.4);
@@ -487,11 +505,124 @@ height: 577px;
   margin-left: 15px;
   margin-right: 15px;
 }
+.logome
+{
+  position: absolute;
+  display: flex;
+  width: 80px;
+  height: 80px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  border-radius: 50%;
+ top: px;
+ transition: transform .4s ease-in-out;
+}
+.logome.logome:hover
+{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.logome
+{
+  
+}
+.costhr2
+{
+  border: none;
+  height: 5px;
+  background-color: #ff0000; /* Change this to the color you want */
+  margin: 20px 0; /* Adjust this to control the margin above and below the hr */
+}
+.copick1
+{
+  font-size: 24px;
+  background: linear-gradient(100deg,#007CF7,#009578);
+  width: 200px;
+  border-radius: 80px;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#hex{
+  font-size: 16px;
+  width: 100px;
+  padding: 15px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  cursor: copy;
+  background: linear-gradient(80deg,#68b8aa,#c7f1f1);
+  transition: font-size .3s ease;
+}
+#hex:hover{
+ font-size: 20px;
+}
+.cp1{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.cp1l1{
+  padding: 15px;
+}
+
+.cp1::-webkit-color-swatch
+{
+border-radius: 50%;
+border: 7px solid #353535;
+}
+.cp1::-webkit-color-swatch
+{
+border-radius: 50%;
+border: 7px solid #353535;
+transition: all .3s ease-in-out;
+}
+.cp1::-webkit-color-swatch:hover{
+transform: scale(1.3);
+}
+.btsmphc{
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  transition: transform .3s ease;
+}
+.btsmphc:hover{
+  transform: scale(1.2);
+}
+
+.btsmphct{
+  padding: 5px;
+ align-items: center;
+ transition: color .3s ease-in-out;
+}
+.btsmphct:hover{
+  color: #c5c5c5;
+}
+#btsmph12{
+  font-size: 40px;
+  background: linear-gradient(180deg,#fde400,#FFBF00);
+  border-radius: 30px;
+  padding: 15px;
+  width: 450px;
+ text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
 
 </style>
 <nav>
   <label class="logo"></label>
   <ul class="navbar">
+    
+
       <div class="select">
           <i class="fa-solid fa-circle-half-stroke"></i>
           <select class="select__input" id="selTheme" title="Change Theme">
@@ -524,11 +655,23 @@ height: 577px;
 
 
 
-
-
-
-
 <hr class="Costom1-hr">
+
+<hr class="costhr2">
+
+<h4 id="btsmph12">Color Picker BETA</h4>
+<div class="copick1" >
+  <label class="cp1l1">Color Picker</label>
+<input value="#ffffff" class="cp1" id="get" type="color" onchange="fetch()" title="Color Picker"><br>
+<div class="btsmphc">
+<label class="btsmphct">Hex Code</label>
+<input type="text" id="hex" readonly><br>
+</div>
+</div>
+
+<br>
+<hr class="costhr2">
+
 <div class="image">
   <a href="https://storyzink.com/m/gd393024?s=2" target="_blank">
   <img class="phonegif" src="Phone1.gif" alt="Bricks">
@@ -549,13 +692,15 @@ height: 577px;
 <img src="qr2.png" style="width: 5rem;height: 5rem;" />
     <p6><ion-icon name="create"></ion-icon> " Your birthday is the beginning of your own personal new year. Your first birthday was a beginning, and each new birthday is a chance to begin again, to start over, to take a new grip on life. — Wilfred Peterson" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
     <p7><i class="fa-solid fa-house-signal"></i> Connect With Us <i class="fa-solid fa-house-signal"></i></p7>
-    <p6>Last Updated: March 20 2023</p6>
+    <p6>Last Updated: April 4 2023</p6>
+    <div title="Philippines Real Time" id="clock"></div>
+    <p6>Remember: April 3 2023</p6>
     <ul class="Socials">
-    <li title="Medal.TV"><a href="https://medal.tv/u/FLIGHNE"><i class="fa-solid fa-medal"></i></a></li>
-    <li><a href="https://www.youtube.com/channel/UC61VXfPklBBMO64Ihx6cRkg"><ion-icon name="logo-youtube"></ion-icon></a></li>
-    <li><a href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon></a></li>
-    <li><a href="https://www.twitch.tv/flighne"><ion-icon name="logo-twitch"></ion-icon></a></li>
-    <li><a href="https://twitter.com/FLIGHNE7"><ion-icon name="logo-twitter"></ion-icon></a></li>
+    <li title="Medal.tv"><a href="https://medal.tv/u/FLIGHNE"><i class="fa-solid fa-medal"></i></a></li>
+    <li title="Youtube"><a href="https://www.youtube.com/channel/UC61VXfPklBBMO64Ihx6cRkg"><i class="fa-brands fa-youtube"></i></a></li>
+    <li title="Discord"><a href="https://discord.gg/q5UHbjwCfp"><i class="fa-brands fa-discord"></i></a></li>
+    <li title="Twitch"><a href="https://www.twitch.tv/flighne"><i class="fa-brands fa-twitch"></i></a></li>
+    <li title="Twitter"><a href="https://twitter.com/FLIGHNE7"><i class="fa-brands fa-twitter"></i></a></li>
     </ul>
     <div class="footertext">
       <div class="col-1">

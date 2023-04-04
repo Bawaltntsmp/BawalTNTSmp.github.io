@@ -23,7 +23,7 @@
 <br>
 
 <nav>
-<label class="logo"></label>
+
 <ul class="navbar">
     <div class="select">
         <i class="fa-solid fa-circle-half-stroke"></i>
@@ -47,6 +47,8 @@
 
 
 <style>
+
+
 .dropdown ul {
   background-color: #116C07;
   display: none;
@@ -161,7 +163,7 @@ align-items: center;
 
 }
 
-
+                                              /* NAVIGATION BAR */
 nav{
     align-items: center;
     margin-left: 15px;
@@ -177,7 +179,8 @@ margin: 0;
 .navbar li {
 display:inline-block;
 transition: all .3s ease;
-}
+} 
+
 .navbar a{
 text-decoration: none;
 color:#FFBF00;
@@ -316,6 +319,36 @@ transition: transform .2s ease-in-out;
     opacity: .4;
     font-weight: 200;
 }
+.tooltipcreator {
+display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+ position: relative;
+
+}
+
+.tooltipcreator .tooltiptextcreator {
+  right: auto;
+  left: 56%;
+    bottom: 30px;
+  visibility: hidden;
+  width: 150px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+  position: fixed;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltipcreator:hover .tooltiptextcreator {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 :root {
     /* Dark Theme */
@@ -715,7 +748,24 @@ background: #23798e;
     padding-left: 15px;
     padding-right: 15px;
   }
+  #clock{
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  border: 3px solid #f38e8e;
+  color: #000;
+  background: #ddd;
+  border-radius: 50px;
+  padding:0 10px;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
 
+}
+#clock:hover{
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  color: white;
+  border: 3px solid #ddd;
+  background: #3a3535;
+
+}
 
 </style>
 
@@ -810,13 +860,14 @@ background: #23798e;
     <img src="qr2.png" style="width: 5rem;height: 5rem;" />
     <p6><ion-icon name="create"></ion-icon> "This Website is Updated At 7:08 PM In Febuary 27 2023" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
     <p7><i class="fa-solid fa-house-signal"></i> Connect With Us <i class="fa-solid fa-house-signal"></i></p7>
-    <p6>Last Updated: March 20 2023</p6>
+    <p6>Last Updated: April 4 2023</p6>
+    <div title="Philippines Real Time" id="clock"></div>
     <ul class="Socials">
-    <li title="Medal.TV"><a href="https://medal.tv/u/FLIGHNE"><i class="fa-solid fa-medal"></i></a></li>
-    <li><a href="https://www.youtube.com/channel/UC61VXfPklBBMO64Ihx6cRkg"><ion-icon name="logo-youtube"></ion-icon></a></li>
-    <li><a href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon></a></li>
-    <li><a href="https://www.twitch.tv/flighne"><ion-icon name="logo-twitch"></ion-icon></a></li>
-    <li><a href="https://twitter.com/FLIGHNE7"><ion-icon name="logo-twitter"></ion-icon></a></li>
+      <li title="Medal.tv"><a href="https://medal.tv/u/FLIGHNE"><i class="fa-solid fa-medal"></i></a></li>
+      <li title="Youtube"><a href="https://www.youtube.com/channel/UC61VXfPklBBMO64Ihx6cRkg"><i class="fa-brands fa-youtube"></i></a></li>
+      <li title="Discord"><a href="https://discord.gg/q5UHbjwCfp"><i class="fa-brands fa-discord"></i></a></li>
+      <li title="Twitch"><a href="https://www.twitch.tv/flighne"><i class="fa-brands fa-twitch"></i></a></li>
+      <li title="Twitter"><a href="https://twitter.com/FLIGHNE7"><i class="fa-brands fa-twitter"></i></a></li>
     </ul>
     <div class="footertext">
         <div class="col-1">
@@ -839,8 +890,8 @@ background: #23798e;
         </div>
     </div>
     <div class="footer-bottom">
-<d>copyright &copy; 2023 BawalTNTSmp.github.io designed by <span><z class="tooltip1" data-tooltip="Website Creator">FLIGHNE</z></span> </d>
-    </div>
+      <d class="textbottom">copyright &copy; 2023 BawalTNTSmp.github.io designed by <div class="tooltipcreator"><span class="topic">FLIGHNE</span><span class="tooltiptextcreator">Website Creator</span></div></d>
+          </div>
     </footer>
 </body>
 

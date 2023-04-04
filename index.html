@@ -114,6 +114,7 @@ margin-left: 500px;
 }
 
 nav{
+  border-radius: 30px;
     align-items: center;
     margin-left: 15px;
     margin-right: 15px;
@@ -363,10 +364,14 @@ transition: transform .2s ease-in-out;
     padding: 20px 0;
     text-align: center;
 }
-.footer-bottom{
+.footer-bottom{                    /* Footer Bottom */
+ 
     font-size: 14px;
     word-spacing: 2px;
     text-transform: capitalize;
+}
+.footer-bottom .textbottom{
+  
 }
 
 .footer-bottom span{
@@ -689,6 +694,39 @@ display: inline-block;
   visibility: visible;
   opacity: 1;
 }
+
+/* FLIGHE Tooltip */
+
+.tooltipcreator {
+display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+ position: relative;
+
+}
+
+.tooltipcreator .tooltiptextcreator {
+  right: auto;
+  left: 56%;
+    bottom: 30px;
+  visibility: hidden;
+  width: 150px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+  position: fixed;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltipcreator:hover .tooltiptextcreator {
+  visibility: visible;
+  opacity: 1;
+}
+
 .Custom1-hr{
   border: none;
   height: 5px;
@@ -750,7 +788,8 @@ display: inline-block;
 .games :hover  {
     color: #9FE2BF;
     transform: scale(1.4);
-    transition: all .2s ease-in-out;
+    text-decoration: underline;
+    transition: all .3s ease-in-out;
 }
 .footertext a {
     color: #fde400;
@@ -842,8 +881,79 @@ display: inline-block;
     padding-right: 15px;
   }
 
+a{
+  text-decoration: none;
+}
 
+  #copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  #textToCopy {
+    background-color: #f0f0f0;
+    border-left: 5px solid #4CAF50;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px;
+    width: 200px;
+  }
+  #copyTextButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  #copyTextButton, #textToCopy:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  #copyTextButton:hover {
+    background-color: #3e8e41;
+  }
+.logo-web,
+.navbar {
+  display: inline-block;
+  vertical-align: middle;
+}
 
+.logo-web img {
+  height: 90px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.logo-web img {
+  height: 90px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 50px;
+  border: 2px solid white;
+
+}
+#clock{
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  border: 3px solid #f38e8e;
+  color: #000;
+  background: #ddd;
+  border-radius: 50px;
+  padding:0 10px;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+
+}
+#clock:hover{
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  color: white;
+  border: 3px solid #ddd;
+  background: #3a3535;
+
+}
 </style>
 
 <!-- The Real Thing Starts Here -->
@@ -853,11 +963,16 @@ display: inline-block;
 <div class="banner"></div>
 <br>
 <div class="tooltip2">
-  This Website Not Yet official! *Hover Me*
+  BETA! *Hover Me*
 <span class="tooltiptext1"><i class="fa-solid fa-comments"></i>Note: This Website Is Still In Develope Stage! Give Us A FeedBack!</span>
 </div>
 
+<br>
+
 <nav>
+  <div class="logo-web">
+    <img title="BTSMP - Logo" src="loader.png">
+      </div>
 <ul class="navbar">
     <div class="select">
         <ion-icon name="contrast-outline">Dark Mode</ion-icon>
@@ -877,6 +992,7 @@ display: inline-block;
        <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#21618C')"><a href="Shoutout.html">Shoutouts</a></li>
     </ul>
     </li>
+</ul>
 </nav>
 
 <hr class="Custom1-hr">
@@ -1011,19 +1127,29 @@ display: inline-block;
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/n0L1nWavwos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
+
+<div id="copy">
+  <button id="copyTextButton" onclick="copyText()">Copy Text</button>
+  <input type="text" id="textToCopy" value="BawalTnTSMP.github.io" readonly>
+</div>
+
+<meta name="google-signin-client_id" content="YOUR_CLIENT_ID">
+
+
 <footer>
     <div class="content-footer">
     <h6><ion-icon name="checkmark-done-circle-outline"></ion-icon> Bawal TNT SMP Website &trade; <ion-icon name="checkmark-done-circle-outline"></ion-icon></h6>
     <img src="qr2.png" style="width: 5rem;height: 5rem;" />
     <p6><ion-icon name="create"></ion-icon> "This Website is Updated EveryWeek" <ion-icon name="create"></ion-icon>||<ion-icon name="build"></ion-icon> This Website Is Still For Rework Every Day <ion-icon name="build"></ion-icon></p6>
     <p7 title="Find Us Here"><i class="fa-solid fa-house-signal"></i> Connect With Us <i class="fa-solid fa-house-signal"></i></p7>
-    <p6>Last Updated: March 20 2023</p6>
+    <p6>Last Updated: April 4 2023</p6>
+    <div title="Philippines Real Time" id="clock"></div>
     <ul class="Socials">
-    <li title="Medal.TV"><a href="https://medal.tv/u/FLIGHNE"><i class="fa-solid fa-medal"></i></a></li>
-    <li ><a href="https://www.youtube.com/channel/UC61VXfPklBBMO64Ihx6cRkg"><ion-icon name="logo-youtube"></ion-icon></a></li>
-    <li ><a href="https://discord.gg/q5UHbjwCfp"><ion-icon name="logo-discord"></ion-icon></a></li>
-    <li ><a href="https://www.twitch.tv/flighne"><ion-icon name="logo-twitch"></ion-icon></a></li>
-    <li ><a href="https://twitter.com/FLIGHNE7"><ion-icon name="logo-twitter"></ion-icon></a></li>
+      <li title="Medal.tv"><a href="https://medal.tv/u/FLIGHNE"><i class="fa-solid fa-medal"></i></a></li>
+    <li title="Youtube"><a href="https://www.youtube.com/channel/UC61VXfPklBBMO64Ihx6cRkg"><i class="fa-brands fa-youtube"></i></a></li>
+    <li title="Discord"><a href="https://discord.gg/q5UHbjwCfp"><i class="fa-brands fa-discord"></i></a></li>
+    <li title="Twitch"><a href="https://www.twitch.tv/flighne"><i class="fa-brands fa-twitch"></i></a></li>
+    <li title="Twitter"><a href="https://twitter.com/FLIGHNE7"><i class="fa-brands fa-twitter"></i></a></li>
     </ul>
     <div class="footertext">
         <div class="col-1">
@@ -1046,7 +1172,7 @@ display: inline-block;
         </div>
     </div>
     <div class="footer-bottom">
-<d>copyright &copy; 2023 BawalTNTSmp.github.io designed by <span><z class="tooltip1" data-tooltip="Website Creator">FLIGHNE</z></span> </d>
+<d class="textbottom">copyright &copy; 2023 BawalTNTSmp.github.io designed by <div class="tooltipcreator"><span class="topic">FLIGHNE</span><span class="tooltiptextcreator">Website Creator</span></div></d>
     </div>
     </footer>
     </body>
