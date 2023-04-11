@@ -117,6 +117,10 @@ function checker2(){
   }
 
   
+  function showAlert() {
+    alert("Please Check The CheckBox To Continue");
+  }
+  
 
 
 
@@ -146,3 +150,33 @@ var get = document.getElementById("get").value;
 document.getElementById("hex").value = get;
 
   }
+
+
+  const animation = document.querySelector('.animation');
+
+function debounce(func, wait = 20, immediate = true) {
+  let timeout;
+  return function() {
+    const context = this, args = arguments;
+    const later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+function checkAnimate() {
+  const triggerBottom = window.innerHeight * 0.9;
+  const animateTop = animation.getBoundingClientRect().top;
+
+  if (animateTop < triggerBottom) {
+    animation.classList.add('animate');
+  }
+}
+
+window.addEventListener('scroll', debounce(checkAnimate));
+
