@@ -30,7 +30,7 @@
               <option value="dark">Dark</option>
           </select>
       </div>
-  <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Go Home"><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
+  <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Go Home"><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
   <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Socials"><a onclick="checker()" class="btn btn-default" href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492" target="_blank"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
   <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Creators"><a href="Creator.html"><ion-icon name="people-outline"></ion-icon> Creators</a></li>
   <li onmouseover="changeBgColor(this, 'White')" onmouseout="changeBgColor(this, '#A62C22')" title="Discord"><a onclick="checker()" class="btn btn-default" href="https://discord.gg/q5UHbjwCfp" target="_blank"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
@@ -91,14 +91,95 @@
 </label>
     <label>
       Your Feedback: What Do You Want To Say To Us
-      <textarea type="textarea" name="Feedback/Message" placeholder="Your FeedBack & Message Will Be Read Within 24 Hours So Chat Us Now!" rows="4" title="Write Something About Us"></textarea>
+      <textarea class="text-area" type="textarea" name="Feedback/Message" placeholder="Your FeedBack & Message Will Be Read Within 24 Hours So Chat Us Now!" rows="4" title="Write Something About Us"></textarea>
     </label>
+    <div class="checkbox-container">
+    <div class="TAGLC" title="Terms And Agreement | Agree or Disagree">
+      <input type="checkbox" id="TAGL" required oninvalid="showAlert()">
+      <label class="TAGA" for="TAGL">Do You Agree To Our <a class="TAGF" href="https://docs.google.com/document/d/1t3noGsqxinjklG5OKFA13HxUKsitAZMVKWyqFJ_7vJ4/edit?usp=sharing" target="_blank">Terms And Agreement</a></label> 
+    </div>
+    </div>
+
     <!-- your other form fields go here -->
-    <button type="submit" title="Send FeedBack | *Please Check If You Missed Something* "onclick="checker3()" class="btn btn-default">Send</button>
+    <button type="submit" title="Send FeedBack | *Please Check If You Missed Something* "onclick="checker3()" class="btn btn-default">Send</button> 
   </form>
 </div>
 
+
+
+
+
+
 <Style>
+  .checkbox-container label:hover::before,
+.checkbox-container input[type='checkbox']:hover + label::before {
+    background-color: #35E07D;
+}
+
+.checkbox-container input[type='checkbox'] {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+.checkbox-container label::before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    border-radius: .15em;
+    margin-right: .5em;
+    border: .05em solid black;
+}
+.checkbox-container input[type='checkbox']:focus + label::before {
+    box-shadow: 0 0 20px black;
+}
+.checkbox-container input[type='checkbox']:checked + label::before {
+    content: '\002714';
+    background-color: #27AE60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.TAGLC {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  transition: all .2s ease-in;
+  max-width: 500px;
+}
+
+.TAGF {
+  text-decoration: line-through;
+  color: #ff0000cc;
+  padding-left: 2px;
+  transition: all .2s ease-in;
+}
+
+.TAGF:hover {
+  text-decoration: underline;
+}
+
+
+.TAGLC label {
+  cursor: help;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.TAGLC label::before {
+  content: '';
+  width: 1em;
+  height: 1em;
+  border-radius: .15em;
+  margin-right: .5em;
+  border: .05em solid black;
+}
+
+
+
   /* Scroll Bar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -352,6 +433,9 @@ form input, form textarea {
    background: #DFDFDF; 
    font-size: 16px;
 }
+.text-area{
+  max-width: 550px;
+}
 form button {
     padding: 15px;
     background: #ff5361;
@@ -583,6 +667,14 @@ transition: transform .2s ease-in-out;
         <li><a href="https://sites.google.com/view/btsmp-about-us/about-us?authuser=0" target="_blank">About Us</a></li>
         <li class="discord"><a href="https://discord.gg/q5UHbjwCfp"target="_blank"> Discord</a></li>
         <li><a href="FeedBack Forms.html" target="_blank">Feedback Forms</a></li>
+      </ul>
+    </div>
+
+    <div class="col-2">
+      <div class="foottext">Website</div>
+      <ul class="games">
+        <li><a href="https://docs.google.com/document/d/1t3noGsqxinjklG5OKFA13HxUKsitAZMVKWyqFJ_7vJ4/edit?usp=sharing" target="_blank">Terms And Agreement</a></li>
+        <li><a href="credits.html" target="_blank">credits</a></li>
       </ul>
     </div>
     </div>

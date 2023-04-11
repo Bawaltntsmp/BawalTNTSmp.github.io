@@ -26,7 +26,11 @@
 
 <!-- Style Part Is This Part -->
 <style>
-   
+   ::selection{
+background-color: #00aeff;
+color: #ddd;
+   }
+
     html {
         scroll-behavior: smooth;
     }
@@ -115,21 +119,27 @@ margin-left: 500px;
 
 nav{
   border-radius: 30px;
-    align-items: center;
+    text-align: center;
     margin-left: 15px;
     margin-right: 15px;
 background: #21618C
 }
 
 .navbar ul {
+  border-radius: 20px;
+  text-align: center;
 list-style: none;
 background:#9FE2BF;
 padding: 0;
 margin: 0;
 }
 .navbar li {
+  border-radius: 20px;
 display:inline-block;
 transition: all .3s ease;
+}
+.navbar li:hover{
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
 }
 .navbar a{
 text-decoration: none;
@@ -269,6 +279,7 @@ margin-right: auto;
 ul{
 font-size: 20px;
 text-align:center;
+text-align: center;
 text-decoration: transparent;
 }
 
@@ -970,19 +981,16 @@ a{
 <br>
 
 <nav>
-  <div class="logo-web">
-    <img title="BTSMP - Logo" src="loader.png">
-      </div>
 <ul class="navbar">
-    <div class="select">
-        <ion-icon name="contrast-outline">Dark Mode</ion-icon>
-        <select class="select__input" id="selTheme" title="Change Theme" onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')">
-            <option value="auto">Auto</option>
-            <option value="light" style="color: white;">Light</option>
-            <option value="dark">Dark</option>
-        </select>
-    </div>
-<li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Go Home"><a href="#"><ion-icon name="home-outline"></ion-icon> Home</a></li>
+  <div class="select">
+    <i class="fa-solid fa-circle-half-stroke"></i>
+    <select class="select__input" id="selTheme" title="Change Theme">
+        <option value="auto">Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</div>
+<li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Go Home"><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
 <li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Socials"><a onclick="checker()" class="btn btn-default" href="https://linktr.ee/flighne?utm_source=linktree_profile_share&ltsid=c9247d2c-b871-49aa-8f4c-a41dc4b9a492" target="_blank"><ion-icon name="share-social-outline"></ion-icon> Socials</a></li>
 <li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Creators"><a href="Creator.html"><ion-icon name="people-outline"></ion-icon> Creators</a></li>
 <li onmouseover="changeBgColor(this, '#D3D3D3')" onmouseout="changeBgColor(this, '#21618C')" title="Discord"><a onclick="checker()" class="btn btn-default" href="https://discord.gg/q5UHbjwCfp" target="_blank"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
@@ -1167,6 +1175,14 @@ a{
             <li><a href="https://sites.google.com/view/btsmp-about-us/about-us?authuser=0" target="_blank">About Us</a></li>
             <li class="discord"><a href="https://discord.gg/q5UHbjwCfp"target="_blank"> Discord</a></li>
             <li><a href="FeedBack Forms.html" target="_blank">Feedback Forms</a></li>
+          </ul>
+        </div>
+
+        <div class="col-2">
+          <div class="foottext">Website</div>
+          <ul class="games">
+            <li><a href="https://docs.google.com/document/d/1t3noGsqxinjklG5OKFA13HxUKsitAZMVKWyqFJ_7vJ4/edit?usp=sharing" target="_blank">Terms And Agreement</a></li>
+            <li><a href="credits.html" target="_blank">credits</a></li>
           </ul>
         </div>
         </div>
